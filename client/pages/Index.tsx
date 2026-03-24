@@ -549,9 +549,7 @@ export default function Index() {
           <h2 className="font-display text-3xl lg:text-4xl text-glowly-black mb-3">
             Gift Cards are here!
           </h2>
-          <p className="font-sans text-base text-glowly-black/60 mb-8">
-            Now available for purchase at both NYC locations.
-          </p>
+          
           <a
             href="#Home"
             target="_blank"
