@@ -15,7 +15,7 @@ export const Hero = () => {
               crafted with low-toxic formulas.
             </h2>
             <a
-              href="https://lsbeauty.zenoti.com/webstoreNew/services"
+              href="https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwNlvYRLH2CLa8oQn7Kvmq3u9a9wMuqMg2ykEqGkJqLcdcR91UlT1Cp4HwOydwDxY8kULw76hB6JD2JbI2jgKzQI5Y9tMd+N5AevdKLZA+iD12dDf9MA+h2I/CGCcfoiVsCWKdZqAnTwLpMAaM2h3YWoPeiHpmo4Ulg0aaVUjKuB6WU/auJjjEidtZGYbjBf6ukczEJqAkJYyNz1NrrDG1D4="
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex px-5 py-2 lg:px-8 lg:py-3 text-white font-display font-normal text-xl bg-glowly-action-orange  lg:text-2xl rounded-full transition duration-300 w-fit shadow-lg hover:shadow-xl hover:opacity-80"
@@ -23,6 +23,8 @@ export const Hero = () => {
               Book now
             </a>
           </div>
+          
+          
 
           {/* Right image */}
           <div className="relative flex items-center justify-center">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MobileMenu } from "./MobileMenu";
 
 export const Header = () => {
-  const [showMoreMenu, setShowMoreMenu] = useState(false);
+  
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Логика отслеживания скролла
@@ -76,15 +76,15 @@ export const Header = () => {
           </a>
 
           {/* More Dropdown */}
-          <div className="relative">
+          {/* <div className="relative">
             <button
               onMouseEnter={() => setShowMoreMenu(true)}
               onMouseLeave={() => setShowMoreMenu(false)}
               className="text-glowly-black font-sans font-medium text-xl hover:text-glowly-orange transition duration-200"
             >
               More
-            </button>
-            {showMoreMenu && (
+            </button> */}
+            {/* {showMoreMenu && (
               <div
                 onMouseEnter={() => setShowMoreMenu(true)}
                 onMouseLeave={() => setShowMoreMenu(false)}
@@ -110,7 +110,7 @@ export const Header = () => {
                 </a>
               </div>
             )}
-          </div>
+          </div> */}
         </nav>
 
         {/* Right side */}
