@@ -2,14 +2,10 @@
   "name": "fusion-starter",
   "private": true,
   "type": "module",
-
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "start": "vite preview",
-    "test": "vitest --run",
-    "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+  "build": "vite build",
+  "preview": "vite preview"
   },
   "dependencies": {
     "dotenv": "^17.2.1",

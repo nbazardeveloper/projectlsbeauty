@@ -24,7 +24,8 @@ const NotFound = () => {
             Oops! Page not found
           </p>
           <p className="font-sans text-lg text-glowly-black/60 mb-8 max-w-md">
-            The page you're looking for doesn't exist. Let's get you back on track!
+            The page you're looking for doesn't exist. Let's get you back on
+            track!
           </p>
           <Link
             to="/"
