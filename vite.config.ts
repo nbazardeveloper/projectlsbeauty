@@ -1,22 +1,28 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { createServer } from "./server";
+// Мы не импортируем createServer здесь для билда, чтобы не тянуть серверные зависимости в клиент
+// import { createServer } from "./server"; 
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Если index.html лежит в папке client, раскомментируйте строку ниже:
+  // root: "client", 
+  
   server: {
     host: "::",
     port: 8080,
-    fs: {
-      allow: ["./client", "./shared", "."],
-      deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
-    },
   },
   build: {
     outDir: "dist",
+    emptyOutDir: true,
+    // Убеждаемся, что билд идет в корень dist
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [
+    react(), 
+    // Включаем плагин только если мы НЕ в режиме билда, 
+    // чтобы Vercel не пытался инициализировать экспресс во время компиляции
+    mode === 'development' ? expressPlugin() : []
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
@@ -28,11 +34,11 @@ export default defineConfig(({ mode }) => ({
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
-    configureServer(server) {
+    apply: "serve", 
+    async configureServer(server) {
+      // Динамический импорт, чтобы серверный код не мешал сборке клиента
+      const { createServer } = await import("./server");
       const app = createServer();
-
-      // Add Express app as middleware to Vite dev server
       server.middlewares.use(app);
     },
   };
