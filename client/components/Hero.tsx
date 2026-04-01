@@ -103,7 +103,7 @@ export const Hero = () => {
               }}
             >
               <img
-                src="/images/hero/hero-mobil.png"
+                src="/images/hero/hero-mobil.webp"
                 alt="LS Beauty Manicure"
                 className="w-full h-full object-cover"
               />
@@ -120,7 +120,7 @@ export const Hero = () => {
               }}
             >
               <img
-                src="/images/hero/hero.png"
+                src="/images/hero/hero.webp"
                 alt="LS Beauty Manicure"
                 className="w-full h-full object-cover object-left-top"
               />

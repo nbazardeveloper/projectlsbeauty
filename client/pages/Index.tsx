@@ -63,7 +63,7 @@ const services = [
     name: "Nails",
     isSignature: true,
     fromPrice: "60",
-    icon: "/images/services/nails.png",
+    icon: "/images/services/nails.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZndZPJ1OiOpNW3zsOKbWSsA9PdnD1QbSU2qNs0y9lSBg6YgFiw2AeBARHgCM9G18CJcyJwufzqR4/Mj0gyG0VVElGYnDKC90r4/Zf5+8l7rRggS9Ld9tJh+l/Z4p+W5CYc=",
   },
@@ -72,7 +72,7 @@ const services = [
     slug: "hair-styling",
     name: "Hair Styling",
     fromPrice: "-",
-    icon: "/images/services/hair-styling.png",
+    icon: "/images/services/hair-styling.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZlxFff3RvcBoyZ93fCnlseqTHUWCoY4/eJ68WJmItS+ci3yhDmWkuuBwRNwjx6Svmd/9knu1N9gJ0Jf7WBhEUOQ/47sBB37mG3sUiHPDqDPx3ZC0f34Blvyd7RLPkYhXLs=",
   },
@@ -81,7 +81,7 @@ const services = [
     slug: "facials",
     name: "Facials",
     fromPrice: "85",
-    icon: "/images/services/facials.png",
+    icon: "/images/services/facials.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZmHAYBsZRT879HlA1Ypd5JJrK8Xqcohu0Sj6lQpcSJ3S4q1zn4auiYW39k08dSa9/1CnKriaZVPvvqO3OROWq0vO3yYEknRmTXLWRDM1RNeK3HULjL1kO1fe4fVbfxWGBI=",
   },
@@ -90,7 +90,7 @@ const services = [
     slug: "brows",
     name: "Brows",
     fromPrice: "30",
-    icon: "/images/services/brows.png",
+    icon: "/images/services/brows.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZl2G/+g45Pu5L6sYhIj+zIWJQoy+Uf/4FkNszJxCx/BvXe31+deY1lYX10HQUJbyKYfwFdk5uVA2tYDt6gjz9hptq9MoHIjjzRCG5wDVfdrkZRVsgiirOQ3QtNYIakHYEk=",
   },
@@ -99,7 +99,7 @@ const services = [
     slug: "lashes",
     name: "Lashes",
     fromPrice: "20",
-    icon: "/images/services/lashes.png",
+    icon: "/images/services/lashes.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZkRYC8rP7jA/FV50p/JJctTF23+5hOCDne/i/FGNsxvzg5o9QWjc59GR5TbbYeE5TWDpmEMxRsXVU5RCt0rQO8cBcD0Vm1uNeVq8CxeBRMdedeiFZc0pk9Q1NhrKl3TtgE=",
   },
@@ -108,7 +108,7 @@ const services = [
     slug: "massage",
     name: "Massage",
     fromPrice: "-",
-    icon: "/images/services/massage.png",
+    icon: "/images/services/massage.webp",
     bookingUrl: "https://www.vagaro.com/lsbeautysalon",
   },
   {
@@ -116,7 +116,7 @@ const services = [
     slug: "permanent-makeup",
     name: "Permanent Makeup",
     fromPrice: "180",
-    icon: "/images/services/permanent-makeup.png",
+    icon: "/images/services/permanent-makeup.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZlnxyFOmUt3EZlZSQ7Q2O1vLax+1+Vklw0Phsi1KyQAzNNfMlgLdirnyoRm8GvtiXy45bauiJ8PCvC7DXgAPrTY4B4X5JxdjGPgQaLOg8HgtOHRNrSrf8qRdD6fmzdUYD8=",
   },
@@ -125,7 +125,7 @@ const services = [
     slug: "sugaring",
     name: "Sugaring",
     fromPrice: "15",
-    icon: "/images/services/sugaring.png",
+    icon: "/images/services/sugaring.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZkP9FO3xRqVF4uLO4rpkrtKyH4o0t2HrvVM7x7B0nH0LgTeRNhadZQrzm/wlnZ39x/O3h1bzG2LRwSeGRAowguIFSmLkCojlMnfE4rgmZs8d1zWdr4LsKKRxJJFDiU6U6g=",
   },
@@ -134,7 +134,7 @@ const services = [
     slug: "waxing",
     name: "Waxing",
     fromPrice: "15",
-    icon: "/images/services/waxing.png",
+    icon: "/images/services/waxing.webp",
     bookingUrl:
       "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZkBnO1sSnVvzAWhmIkgw6neSL2n8HDR6l1tWue58AfCKsWHcGBq0xAR+/qaxmfq/WJqjt7rrKvaUlsdcG0xim5wo1Nsn3+PJxPKZTmKcf22CY8Jid9C0n50dshQTTtEWH0=",
   },
@@ -593,7 +593,7 @@ export default function Index() {
               </div>
               <div className="flex items-end justify-center" style={{ minHeight: "300px" }}>
                 <img
-                  src="/images/why/master.png"
+                  src="/images/why/master.webp"
                   alt="Experienced nail technician at LS Beauty Salon Paoli PA"
                   className="w-auto object-contain"
                   style={{ maxHeight: "320px" }}
@@ -617,7 +617,7 @@ export default function Index() {
               >
                 <div className="relative w-full h-full flex items-end justify-center">
                   <img
-                    src="/images/why/master.png"
+                    src="/images/why/master.webp"
                     alt="Experienced nail technician at LS Beauty Salon Paoli PA"
                     className="relative z-10 w-auto object-contain"
                     style={{ height: "115%", maxHeight: "none", position: "absolute", bottom: "0", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.1))" }}
