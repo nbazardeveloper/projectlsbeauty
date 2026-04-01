@@ -10,7 +10,7 @@ export const Hero = () => {
               Your local nail place
             </p>
             <h1 className="font-display font-normal text-4xl sm:text-5xl lg:text-6xl leading-tight text-glowly-black mb-2 lg:mb-4">
-              Best Russian Gel Manicure &amp; Pedicure
+              Premium Russian Gel Manicure &amp; Pedicure  in Paoli, PA 
             </h1>
             <h2 className="font-display font-normal text-2xl sm:text-3xl lg:text-4xl leading-tight text-glowly-black mb-4 lg:mb-8">
               crafted with low-toxic formulas.
@@ -19,8 +19,8 @@ export const Hero = () => {
               href="https://lsbeauty.zenoti.com/webstoreNew/services"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex px-5 py-2 lg:px-8 lg:py-3 text-white font-display font-normal text-base lg:text-2xl rounded-full transition duration-300 w-fit shadow-lg hover:shadow-xl hover:opacity-80"
-              style={{ backgroundColor: "#0097A7" }}
+              className="inline-flex px-5 py-2 lg:px-8 lg:py-3 text-white font-display font-normal text-xl bg-glowly-action-orange  lg:text-2xl rounded-full transition duration-300 w-fit shadow-lg hover:shadow-xl hover:opacity-80"
+              
             >
               Book now
             </a>
@@ -32,27 +32,27 @@ export const Hero = () => {
             {/* Feature badges — floating over image */}
             <div className="absolute inset-0 pointer-events-none z-20 hidden lg:block">
               {/* 300+ gel shades */}
-              <div className="absolute top-12 right-20 bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
+              <div className="absolute top-12 right-40 bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-glowly-lavender">
                   <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
                 </svg>
-                <span className="font-sans text-xs font-semibold text-glowly-black whitespace-nowrap">300+ gel shades</span>
+                <span className="font-sans text-s font-semibold text-glowly-black whitespace-nowrap">300+ gel shades</span>
               </div>
 
               {/* SPF Skin Protection */}
-              <div className="absolute top-1/2 right-8 bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
+              <div className="absolute top-1/3 right-8 bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-glowly-lavender">
                   <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
                 </svg>
-                <span className="font-sans text-xs font-semibold text-glowly-black whitespace-nowrap">SPF Skin Protection</span>
+                <span className="font-sans text-s font-semibold text-glowly-black whitespace-nowrap">SPF Skin Protection</span>
               </div>
 
               {/* HEMA-free, TPO-free */}
-              <div className="absolute bottom-20 right-12 bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
+              <div className="absolute top-1/2 right-12 bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-glowly-lavender">
                   <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
                 </svg>
-                <span className="font-sans text-xs font-semibold text-glowly-black whitespace-nowrap">HEMA-free, TPO-free Gel Formulas</span>
+                <span className="font-sans text-s font-semibold text-glowly-black whitespace-nowrap">HEMA-free, TPO-free Gel Formulas</span>
               </div>
             </div>
 
@@ -87,17 +87,7 @@ export const Hero = () => {
 
           </div>
 
-          {/* Decorative stars */}
-          <div className="absolute top-10 left-10 w-12 h-12 z-10" style={{ color: "rgba(92, 225, 230, 0.4)" }}>
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-          </div>
-          <div className="absolute bottom-20 right-10 w-16 h-16 z-10" style={{ color: "rgba(92, 225, 230, 0.2)" }}>
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-          </div>
+      
 
         </div>
       </div>

@@ -20,7 +20,8 @@ export default {
       colors: {
         glowly: {
           orange: "#0097A7",
-          lavender: "#5ce1e6",
+          lavender: "#49d0c9",
+          "action-orange": "#FF7043",
           black: "hsl(var(--glowly-black))",
           white: "hsl(var(--glowly-white))",
         },

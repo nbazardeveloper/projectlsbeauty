@@ -21,12 +21,12 @@ export const MobileMenu = () => {
       </button>
 
       {isOpen && (
-        <nav className="absolute top-20 left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
+        <nav className="absolute top-25 left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
           <ul className="flex flex-col p-6 space-y-4">
             <li>
               <a
                 href="/#why"
-                className="text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="text-glowly-black font-sans text-2xl  hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 Why us
@@ -35,7 +35,7 @@ export const MobileMenu = () => {
             <li>
               <a
                 href="/#services"
-                className="text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="text-glowly-black font-sans text-2xl hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 Services
@@ -44,7 +44,7 @@ export const MobileMenu = () => {
             <li>
               <a
                 href="/#reviews"
-                className="text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="text-glowly-black font-sans text-2xl hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 Reviews
@@ -53,7 +53,7 @@ export const MobileMenu = () => {
             <li>
               <a
                 href="/#locations"
-                className="text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="text-glowly-black font-sans text-2xl hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 Locations
@@ -62,16 +62,16 @@ export const MobileMenu = () => {
             <li>
               <a
                 href="/#faq"
-                className="text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="text-glowly-black font-sans text-2xl hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 F.A.Q
               </a>
             </li>
             <li>
-              <Link
+              {/* <Link
                 to="/blog"
-                className="text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="text-glowly-black font-sans text-lg font-bold hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 Blog
@@ -80,25 +80,25 @@ export const MobileMenu = () => {
             <li className="pt-4 border-t border-gray-200">
               <a
                 href="#rewards"
-                className="block text-glowly-black font-sans text-lg hover:text-glowly-orange transition mb-3"
+                className="block text-glowly-black font-sans font-bold text-lg hover:text-glowly-orange transition mb-3"
                 onClick={() => setIsOpen(false)}
               >
                 Loyalty Rewards
               </a>
               <a
                 href="#cancellation"
-                className="block text-glowly-black font-sans text-lg hover:text-glowly-orange transition mb-3"
+                className="block text-glowly-black font-sans font-bold text-lg hover:text-glowly-orange transition mb-3"
                 onClick={() => setIsOpen(false)}
               >
                 Cancellation Policy
               </a>
               <a
                 href="#guarantee"
-                className="block text-glowly-black font-sans text-lg hover:text-glowly-orange transition"
+                className="block text-glowly-black font-sans font-bold text-lg hover:text-glowly-orange transition"
                 onClick={() => setIsOpen(false)}
               >
                 Repair Policy
-              </a>
+              </a> */}
             </li>
           </ul>
         </nav>
