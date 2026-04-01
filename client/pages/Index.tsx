@@ -145,14 +145,13 @@ function IntroScreen({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<"logo" | "fadeout">("logo");
 
   useEffect(() => {
-    // After 1.6s show logo, then after another 1s start fade out
     const t1 = setTimeout(() => setPhase("fadeout"), 1600);
     const t2 = setTimeout(() => onDone(), 2400);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
     };
-  }, [onDone]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div
@@ -387,16 +386,8 @@ function FaqAccordion() {
 
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 export default function Index() {
-  const [introVisible, setIntroVisible] = useState(() => {
-    // Only show intro once per session
-    if (typeof window !== "undefined") {
-      const shown = sessionStorage.getItem("ls-intro-shown");
-      if (shown) return false;
-      sessionStorage.setItem("ls-intro-shown", "1");
-    }
-    return true;
-  });
-  const [contentReady, setContentReady] = useState(!introVisible);
+  const [introVisible, setIntroVisible] = useState(true);
+  const [contentReady, setContentReady] = useState(false);
 
   const handleIntroDone = () => {
     setIntroVisible(false);
