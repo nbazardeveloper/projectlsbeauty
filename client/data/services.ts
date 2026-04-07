@@ -1,0 +1,325 @@
+export const BOOK_URL = "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwNlvYRLH2CLa8oQn7Kvmq3u9a9wMuqMg2ykEqGkJqLcdcR91UlT1Cp4HwOydwDxY8kULw76hB6JD2JbI2jgKzQI5Y9tMd+N5AevdKLZA+iD12dDf9MA+h2I/CGCcfoiVsCWKdZqAnTwLpMAaM2h3YWoPeiHpmo4Ulg0aaVUjKuB6WU/auJjjEidtZGYbjBf6ukczEJqAkJYyNz1NrrDG1D4=";
+
+export interface ServiceItem {
+  slug: string;
+  name: string;
+  tagline: string;
+  fromPrice: string;
+  bookingUrl: string;
+  heroDescription: string;
+  seoTitle: string;
+  seoDescription: string;
+  about: string;
+  benefits: string[];
+  whatToExpect: string[];
+  faq: { q: string; a: string }[];
+  relatedSlugs: string[];
+}
+
+export const SERVICES: ServiceItem[] = [
+  {
+    slug: "nails",
+    name: "Nails",
+    tagline: "Russian Gel Manicure & Pedicure — Paoli, PA",
+    fromPrice: "$60",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZndZPJ1OiOpNW3zsOKbWSsA9PdnD1QbSU2qNs0y9lSBg6YgFiw2AeBARHgCM9G18CJcyJwufzqR4/Mj0gyG0VVElGYnDKC90r4/Zf5+8l7rRggS9Ld9tJh+l/Z4p+W5CYc=",
+    seoTitle: "Russian Gel Manicure & Pedicure Paoli PA | LS Beauty Salon",
+    seoDescription: "Expert Russian Gel Manicure & Pedicure in Paoli, PA. Dry e-file technique, HEMA-free formulas, 300+ gel shades. 10-day guarantee. Book online at LS Beauty Salon.",
+    heroDescription: "Our signature Russian Manicure uses a dry e-file technique for a flawlessly clean finish that lasts up to 4 weeks — with zero cutting, zero irritation.",
+    about: "At LS Beauty Salon in Paoli, PA, our nail services go beyond the ordinary. The Russian Manicure is a precision dry technique using an electric file to meticulously clean and prep the skin around the nail without cutting the cuticle. The result is an incredibly clean, precise finish with long-lasting gel color. We use only HEMA-free, TPO-free gel formulas to protect your skin and natural nails. Our Strong Gel (Hard Gel) option adds extra durability and length for clients who want it all — strength, beauty, and longevity.",
+    benefits: [
+      "Lasts up to 4 weeks without lifting",
+      "No cutting — e-file removes only dead skin",
+      "HEMA-free & TPO-free gel formulas",
+      "300+ gel shades to choose from",
+      "10-day maintenance guarantee",
+      "SPF skin protection included",
+      "Suitable for weak, thin, or damaged nails",
+    ],
+    whatToExpect: [
+      "Removal of previous gel or acrylic product",
+      "Full Russian Manicure prep with e-file",
+      "Cuticle care — no cutting, only gentle removal of dead skin",
+      "Shape and length customization",
+      "Gel color or French application of your choice",
+      "UV lamp curing and top coat finish",
+    ],
+    faq: [
+      { q: "How long does a Russian Manicure last?", a: "With proper care, a Russian Manicure can last 3–4 weeks without lifting. We back that up with a 10-day maintenance guarantee." },
+      { q: "Is the e-file technique safe?", a: "Yes — in the hands of a trained technician, the e-file is safer than traditional nippers because it only removes non-living tissue, reducing the risk of irritation or infection." },
+      { q: "What is Strong Gel?", a: "Strong Gel (Hard Gel) is a durable gel overlay that adds strength and length to natural nails. It's more resistant to breakage than regular gel polish and can be shaped and filed." },
+      { q: "Do you offer pedicures?", a: "Yes! We offer Russian Pedicures using the same dry e-file technique for perfectly groomed toenails and smooth skin — no water soaking needed." },
+    ],
+    relatedSlugs: ["brows", "lashes", "facials"],
+  },
+  {
+    slug: "hair-styling",
+    name: "Hair Styling",
+    tagline: "Professional Hair Styling — Paoli, PA",
+    fromPrice: "Call for pricing",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZlxFff3RvcBoyZ93fCnlseqTHUWCoY4/eJ68WJmItS+ci3yhDmWkuuBwRNwjx6Svmd/9knu1N9gJ0Jf7WBhEUOQ/47sBB37mG3sUiHPDqDPx3ZC0f34Blvyd7RLPkYhXLs=",
+    seoTitle: "Hair Styling Salon Paoli PA | Blowouts, Cuts & Color | LS Beauty",
+    seoDescription: "Professional hair styling in Paoli, PA. Blowouts, haircuts, color treatments, and special occasion styles by experienced stylists at LS Beauty Salon & Spa.",
+    heroDescription: "From everyday blowouts to special occasion styles, our experienced hair stylists in Paoli deliver beautiful, long-lasting results tailored to you.",
+    about: "Our hair stylists at LS Beauty Salon bring years of professional experience to every appointment. Whether you're looking for a fresh cut, a rich color treatment, or a flawless blowout for a special event, we create styles that complement your features and fit your lifestyle. We use premium products that protect hair health while delivering stunning results.",
+    benefits: [
+      "Experienced, professional stylists",
+      "Premium hair care products",
+      "Customized styles for every hair type",
+      "Relaxing salon atmosphere",
+      "Special occasion and bridal styling available",
+      "Color treatments and highlights",
+    ],
+    whatToExpect: [
+      "Consultation to understand your hair goals",
+      "Shampoo and conditioning treatment",
+      "Cut, color, or style as requested",
+      "Blowout and finish",
+      "Styling tips and product recommendations",
+    ],
+    faq: [
+      { q: "Do you offer hair coloring?", a: "Yes, we offer a range of color services including full color, highlights, balayage, and toning. Book a consultation to discuss the best option for your hair." },
+      { q: "Can I book hair and nails together?", a: "Absolutely! Many of our clients love combining hair styling with a manicure or pedicure for a full beauty day. Contact us to schedule back-to-back appointments." },
+      { q: "Do you do bridal hair?", a: "Yes, we offer bridal and special occasion hair styling. We recommend booking in advance to ensure availability on your date." },
+    ],
+    relatedSlugs: ["nails", "brows", "lashes"],
+  },
+  {
+    slug: "facials",
+    name: "Facials",
+    tagline: "Rejuvenating Facials — Paoli, PA",
+    fromPrice: "$85",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZmHAYBsZRT879HlA1Ypd5JJrK8Xqcohu0Sj6lQpcSJ3S4q1zn4auiYW39k08dSa9/1CnKriaZVPvvqO3OROWq0vO3yEknRmTXLWRDM1RNeK3HULjL1kO1fe4fVbfxWGBI=",
+    seoTitle: "Facial Treatments Paoli PA | Deep Cleansing & Anti-Aging | LS Beauty",
+    seoDescription: "Rejuvenating facial treatments in Paoli, PA. Deep cleansing, anti-aging, and hydrating facials tailored to your skin type. Book your facial at LS Beauty Salon & Spa.",
+    heroDescription: "Restore your glow with our customized facial treatments — from deep cleansing to anti-aging — all designed for your unique skin needs in our tranquil Paoli spa.",
+    about: "Our licensed estheticians at LS Beauty Salon offer a full menu of facial treatments designed to address your specific skin concerns. Whether you're dealing with acne, dryness, hyperpigmentation, or simply want to maintain healthy, radiant skin, we create a personalized treatment plan using high-quality skincare products. Every facial includes a thorough consultation, cleansing, exfoliation, and targeted treatment — leaving you with visibly refreshed skin.",
+    benefits: [
+      "Customized for your skin type and concerns",
+      "Licensed estheticians",
+      "Premium skincare products",
+      "Deep pore cleansing and extractions",
+      "Anti-aging and hydrating treatments available",
+      "Relaxing spa experience",
+    ],
+    whatToExpect: [
+      "Skin consultation and analysis",
+      "Double cleanse and steam",
+      "Gentle exfoliation",
+      "Extractions if needed",
+      "Targeted serum and mask treatment",
+      "Moisturizer and SPF finish",
+    ],
+    faq: [
+      { q: "How often should I get a facial?", a: "For most skin types, a facial every 4–6 weeks is ideal to maintain healthy skin. Your esthetician will recommend a personalized schedule." },
+      { q: "What type of facials do you offer?", a: "We offer deep cleansing, hydrating, anti-aging, brightening, and acne-targeting facials. All treatments are customized based on your skin consultation." },
+      { q: "Is there downtime after a facial?", a: "Most facials have no downtime. If extractions are performed, you may experience minor redness for a few hours. We recommend avoiding makeup for 24 hours after your treatment." },
+    ],
+    relatedSlugs: ["nails", "brows", "massage"],
+  },
+  {
+    slug: "brows",
+    name: "Brows",
+    tagline: "Expert Brow Shaping & Tinting — Paoli, PA",
+    fromPrice: "$30",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZl2G/+g45Pu5L6sYhIj+zIWJQoy+Uf/4FkNszJxCx/BvXe31+deY1lYX10HQUJbyKYfwFdk5uVA2tYDt6gjz9hptq9MoHIjjzRCG5wDVfdrkZRVsgiirOQ3QtNYIakHYEk=",
+    seoTitle: "Eyebrow Shaping & Tinting Paoli PA | Brow Wax | LS Beauty Salon",
+    seoDescription: "Professional eyebrow shaping, waxing, and tinting in Paoli, PA. Frame your face with perfectly shaped brows by expert estheticians at LS Beauty Salon & Spa.",
+    heroDescription: "Perfectly shaped brows frame your face and elevate your entire look. Our expert brow artists in Paoli create a personalized shape that enhances your natural features.",
+    about: "Great brows can transform your entire appearance. At LS Beauty Salon, our brow specialists take a personalized approach — analyzing your face shape, natural brow growth, and style preferences to create a perfectly balanced arch. We offer brow waxing, threading, tinting, and lamination to keep your brows looking polished and defined. Whether you prefer a natural, fluffy look or a more defined arch, we'll create the shape that works best for you.",
+    benefits: [
+      "Face-shape analysis for personalized brow design",
+      "Waxing, threading, and tinting available",
+      "Brow lamination for fluffy, lifted brows",
+      "Long-lasting results",
+      "Enhances your natural brow growth",
+      "Pairs perfectly with lash services",
+    ],
+    whatToExpect: [
+      "Brow consultation and shape mapping",
+      "Hair removal via wax or thread",
+      "Tinting to add depth and definition (if requested)",
+      "Tweezing for precision cleanup",
+      "Finishing gel or serum",
+    ],
+    faq: [
+      { q: "How long does brow shaping last?", a: "Brow shaping typically lasts 3–4 weeks depending on your hair growth cycle. We recommend coming in regularly to maintain your shape." },
+      { q: "What is brow lamination?", a: "Brow lamination is a treatment that straightens and lifts brow hairs to create a fuller, more defined look. Results last 6–8 weeks." },
+      { q: "Do you offer brow tinting?", a: "Yes! Brow tinting adds color and depth to your brows, making them look fuller and more defined. It's a great option for lighter hair colors." },
+    ],
+    relatedSlugs: ["lashes", "permanent-makeup", "nails"],
+  },
+  {
+    slug: "lashes",
+    name: "Lashes",
+    tagline: "Eyelash Extensions & Lifts — Paoli, PA",
+    fromPrice: "$20",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZkRYC8rP7jA/FV50p/JJctTF23+5hOCDne/i/FGNsxvzg5o9QWjc59GR5TbbYeE5TWDpmEMxRsXVU5RCt0rQO8cBcD0Vm1uNeVq8CxeBRMdedeiFZc0pk9Q1NhrKl3TtgE=",
+    seoTitle: "Eyelash Extensions & Lash Lift Paoli PA | LS Beauty Salon",
+    seoDescription: "Beautiful eyelash extensions and lash lifts in Paoli, PA. Classic, volume, and hybrid lash styles. Wake up with gorgeous lashes at LS Beauty Salon & Spa.",
+    heroDescription: "Wake up with stunning lashes every day. Our certified lash artists in Paoli apply extensions with meticulous precision for a natural or dramatic look that's all you.",
+    about: "Beautiful lashes make every look more effortless. At LS Beauty Salon, our certified lash technicians offer classic, volume, and hybrid eyelash extensions applied with the highest precision. We also offer lash lifts and tints for clients who want to enhance their natural lashes without extensions. All products are safe, gentle, and designed to maintain the health of your natural lashes.",
+    benefits: [
+      "Classic, volume, and hybrid extension styles",
+      "Lash lift and tint available",
+      "Safe, lightweight extension materials",
+      "Certified lash technicians",
+      "Lasts 3–4 weeks with proper care",
+      "No mascara needed",
+      "Natural to dramatic looks available",
+    ],
+    whatToExpect: [
+      "Lash style and curl consultation",
+      "Under-eye pad application",
+      "Careful isolation of natural lashes",
+      "Individual extension application",
+      "Curing and brushing",
+      "Aftercare instructions provided",
+    ],
+    faq: [
+      { q: "How long do lash extensions last?", a: "Lash extensions typically last 3–4 weeks before a fill is needed. They shed naturally with your lash cycle." },
+      { q: "What is a lash lift?", a: "A lash lift curls your natural lashes upward from the base, creating a wide-eyed, mascara-free look that lasts 6–8 weeks." },
+      { q: "Can I wear mascara with extensions?", a: "We recommend avoiding mascara on extensions as it can weaken the adhesive. If needed, only use mascara on the tips and avoid oil-based formulas." },
+    ],
+    relatedSlugs: ["brows", "permanent-makeup", "nails"],
+  },
+  {
+    slug: "massage",
+    name: "Massage",
+    tagline: "Relaxing Massage Therapy — Paoli, PA",
+    fromPrice: "Call for pricing",
+    bookingUrl: "https://www.vagaro.com/lsbeautysalon",
+    seoTitle: "Massage Therapy Paoli PA | Relaxation & Deep Tissue | LS Beauty Spa",
+    seoDescription: "Restorative massage therapy in Paoli, PA. Relaxation, deep tissue, and custom massage treatments in a peaceful spa setting at LS Beauty Salon & Spa.",
+    heroDescription: "Unwind and restore your body in our tranquil Paoli spa. Our skilled massage therapists offer customized treatments to relieve tension and rejuvenate your mind and body.",
+    about: "At LS Beauty Salon & Spa in Paoli, our massage therapy services are designed to help you truly unwind. Our licensed massage therapists offer a range of techniques tailored to your needs — from gentle relaxation massages to targeted deep tissue work for chronic tension. Every session takes place in a peaceful, private setting designed to help you leave feeling completely restored.",
+    benefits: [
+      "Licensed massage therapists",
+      "Relaxation and deep tissue options",
+      "Customized pressure and technique",
+      "Private, tranquil spa environment",
+      "Reduces stress, tension, and muscle soreness",
+      "Improves circulation and flexibility",
+    ],
+    whatToExpect: [
+      "Intake consultation and pressure preferences",
+      "Choice of massage style and focus area",
+      "60 or 90-minute session options",
+      "Premium massage oils and products",
+      "Post-session hydration and relaxation time",
+    ],
+    faq: [
+      { q: "What type of massages do you offer?", a: "We offer Swedish relaxation massage, deep tissue massage, and customized sessions targeting specific areas of tension. Contact us to discuss your needs." },
+      { q: "How long are massage sessions?", a: "Sessions are available in 60-minute and 90-minute formats. We recommend 90 minutes for a full-body treatment." },
+      { q: "Should I tip my massage therapist?", a: "Gratuity is always appreciated but never required. 15–20% is customary for excellent service." },
+    ],
+    relatedSlugs: ["facials", "nails", "sugaring"],
+  },
+  {
+    slug: "permanent-makeup",
+    name: "Permanent Makeup",
+    tagline: "Microblading & Permanent Makeup — Paoli, PA",
+    fromPrice: "$180",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZlnxyFOmUt3EZlZSQ7Q2O1vLax+1+Vklw0Phsi1KyQAzNNfMlgLdirnyoRm8GvtiXy45bauiJ8PCvC7DXgAPrTY4B4X5JxdjGPgQaLOg8HgtOHRNrSrf8qRdD6fmzdUYD8=",
+    seoTitle: "Permanent Makeup & Microblading Paoli PA | LS Beauty Salon",
+    seoDescription: "Professional permanent makeup and microblading in Paoli, PA. Ombre brows, lip blush, eyeliner tattoo, and more by certified artists at LS Beauty Salon & Spa.",
+    heroDescription: "Wake up flawless every day with permanent makeup by our certified artists in Paoli. From microblading to lip blush — precision results that enhance your natural beauty.",
+    about: "Permanent makeup is a life-changing investment in your confidence and daily routine. At LS Beauty Salon, our certified permanent makeup artists specialize in microblading, ombre powder brows, lip blush, and eyeliner tattoo. Using the finest pigments and advanced techniques, we create soft, natural-looking results that complement your features and last for years. Every treatment includes a thorough consultation, numbing for comfort, and a follow-up touch-up session.",
+    benefits: [
+      "Certified permanent makeup artists",
+      "Microblading, ombre brows, lip blush, eyeliner",
+      "Premium, long-lasting pigments",
+      "Topical numbing for comfort",
+      "Follow-up touch-up included",
+      "Natural-looking, customized results",
+      "Lasts 1–3 years with proper care",
+    ],
+    whatToExpect: [
+      "Pre-treatment consultation and shape design",
+      "Topical numbing application (30 minutes)",
+      "Precise pigment application",
+      "Color and shape review",
+      "Aftercare kit and instructions",
+      "Touch-up appointment at 6–8 weeks",
+    ],
+    faq: [
+      { q: "How long does permanent makeup last?", a: "Permanent makeup typically lasts 1–3 years depending on skin type, sun exposure, and aftercare. A touch-up is recommended every 12–18 months to maintain color." },
+      { q: "Does permanent makeup hurt?", a: "We apply a topical numbing cream before the procedure to minimize discomfort. Most clients describe the sensation as mild pressure or scratching." },
+      { q: "What is the healing process like?", a: "After your procedure, the treated area will appear darker for 7–14 days as the skin heals. The color softens to its final shade after about 4 weeks." },
+    ],
+    relatedSlugs: ["brows", "lashes", "nails"],
+  },
+  {
+    slug: "sugaring",
+    name: "Sugaring",
+    tagline: "Natural Sugaring Hair Removal — Paoli, PA",
+    fromPrice: "$15",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZkP9FO3xRqVF4uLO4rpkrtKyH4o0t2HrvVM7x7B0nH0LgTeRNhadZQrzm/wlnZ39x/O3h1bzG2LRwSeGRAowguIFSmLkCojlMnfE4rgmZs8d1zWdr4LsKKRxJJFDiU6U6g=",
+    seoTitle: "Sugaring Hair Removal Paoli PA | Natural & Gentle | LS Beauty Salon",
+    seoDescription: "Natural sugaring hair removal in Paoli, PA. Gentle, all-natural sugar paste removes hair from the root for smooth, long-lasting results. Book at LS Beauty Salon & Spa.",
+    heroDescription: "Silky smooth skin with sugaring — the ancient, all-natural hair removal method that's gentler on skin than wax and leaves you smooth for weeks.",
+    about: "Sugaring is one of the oldest and most gentle forms of hair removal, made from just sugar, lemon, and water. Unlike traditional wax, the sugar paste only adheres to hair — not skin — making it significantly less painful and reducing the risk of irritation or ingrown hairs. At LS Beauty Salon in Paoli, our trained sugaring specialists provide full-body sugaring services that leave your skin silky smooth. With regular treatments, hair grows back finer and sparser over time.",
+    benefits: [
+      "All-natural formula — sugar, lemon, water only",
+      "Less painful than traditional wax",
+      "Adheres to hair, not skin — less irritation",
+      "Reduces ingrown hairs",
+      "Hair grows back finer with regular treatments",
+      "Safe for sensitive skin",
+      "Eco-friendly and biodegradable",
+    ],
+    whatToExpect: [
+      "Skin prep and cleansing",
+      "Application of warm sugar paste",
+      "Removal in the direction of hair growth",
+      "Post-treatment soothing lotion",
+      "Aftercare instructions for best results",
+    ],
+    faq: [
+      { q: "How is sugaring different from waxing?", a: "Sugar paste only sticks to hair, not skin, making it gentler and less likely to cause redness or irritation. It also removes hair in the direction of growth, reducing breakage." },
+      { q: "How long does sugaring last?", a: "Results typically last 3–5 weeks. With regular sugaring, hair grows back finer and slower over time." },
+      { q: "What areas can be sugared?", a: "We offer sugaring for the face, underarms, arms, legs, bikini, and Brazilian areas." },
+    ],
+    relatedSlugs: ["waxing", "facials", "massage"],
+  },
+  {
+    slug: "waxing",
+    name: "Waxing",
+    tagline: "Professional Waxing Services — Paoli, PA",
+    fromPrice: "$15",
+    bookingUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwPQt+3IWnukrBmUhTxnOo0IuQaQHrH1+bWRYmdN+vZD9GHvsdAWEl93xbhuOPkGY185dlJN/iheKouWHWBpiRZkBnO1sSnVvzAWhmIkgw6neSL2n8HDR6l1tWue58AfCKsWHcGBq0xAR+/qaxmfq/WJqjt7rrKvaUlsdcG0xim5wo1Nsn3+PJxPKZTmKcf22CY8Jid9C0n50dshQTTtEWH0=",
+    seoTitle: "Waxing Services Paoli PA | Body & Facial Wax | LS Beauty Salon",
+    seoDescription: "Professional waxing services in Paoli, PA. Body waxing, facial waxing, bikini, Brazilian, and more. Smooth, long-lasting results at LS Beauty Salon & Spa.",
+    heroDescription: "Fast, effective, and long-lasting — our professional waxing services in Paoli remove hair cleanly from the root for weeks of smooth skin.",
+    about: "Professional waxing at LS Beauty Salon delivers smooth, long-lasting results for every body area. Our trained estheticians use high-quality hard and soft waxes appropriate for each area — gentle hard wax for sensitive areas like the bikini and face, and efficient strip wax for larger areas like the legs and back. We prep and soothe skin before and after every service to minimize discomfort and keep your skin healthy.",
+    benefits: [
+      "Hard and soft wax for every area",
+      "Long-lasting results — 3–6 weeks",
+      "Trained, experienced estheticians",
+      "Pre and post-wax skin care included",
+      "Available for face and full body",
+      "Reduces hair density over time",
+    ],
+    whatToExpect: [
+      "Skin prep and cleansing",
+      "Application of appropriate wax type",
+      "Quick, efficient removal",
+      "Tweezing for any remaining hairs",
+      "Soothing post-wax lotion",
+    ],
+    faq: [
+      { q: "How long does waxing last?", a: "Waxing results typically last 3–6 weeks depending on your hair growth cycle and the area treated." },
+      { q: "What areas do you wax?", a: "We wax eyebrows, upper lip, chin, underarms, arms, legs, back, bikini, and Brazilian." },
+      { q: "How long does hair need to be for waxing?", a: "Hair should be at least 1/4 inch (about the length of a grain of rice) for wax to grip it effectively." },
+    ],
+    relatedSlugs: ["sugaring", "brows", "nails"],
+  },
+];
+
+export function getServiceBySlug(slug: string): ServiceItem | undefined {
+  return SERVICES.find((s) => s.slug === slug);
+}
+
+export function getRelatedServices(slugs: string[]): ServiceItem[] {
+  return slugs.map((slug) => SERVICES.find((s) => s.slug === slug)).filter(Boolean) as ServiceItem[];
+}

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export const MobileMenu = () => {
+export const MobileMenu = ({ iconColor = "white" }: { iconColor?: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -14,9 +13,9 @@ export const MobileMenu = () => {
         className="inline-flex items-center justify-center p-2 rounded-full bg-glowly-lavender/50"
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-white" />
+          <X className="w-6 h-6" style={{ color: iconColor }} />
         ) : (
-          <Menu className="w-6 h-6 text-white" />
+          <Menu className="w-6 h-6" style={{ color: iconColor }} />
         )}
       </button>
 

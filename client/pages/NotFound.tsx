@@ -1,6 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "@/components/Header";
+import { Seo } from "@/components/Seo";
 
 const NotFound = () => {
   const location = useLocation();
@@ -14,6 +15,12 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Page Not Found | LS Beauty Salon & Spa"
+        description="The page you requested could not be found on LS Beauty Salon & Spa."
+        path={location.pathname}
+        noindex
+      />
       <Header />
       <div className="flex items-center justify-center py-24">
         <div className="text-center px-6">

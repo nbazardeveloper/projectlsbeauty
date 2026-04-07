@@ -1,8 +1,4 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,20 +46,52 @@
     --glowly-black: 0 0% 0%;
     --glowly-white: 0 0% 100%;
 
+    /* ── Typography scale ────────────────────────────────────────────────────
+       Централизованные размеры шрифтов. Меняй здесь — изменится везде.
+    ── */
+
+    /* Heading (Cormorant Garamond) */
+    --fs-h1:        clamp(2.25rem, 5vw, 3.75rem);   /* hero h1          */
+    --fs-h2:        clamp(1.5rem,  3vw, 2.25rem);   /* hero h2 subtitle */
+    --fs-section:   clamp(2rem,    4vw, 3rem);       /* section titles   */
+    --fs-card-title: 2rem;                           /* service / card names */
+
+    /* Display (Playfair Display) */
+    --fs-display-xl: clamp(2rem, 4vw, 3rem);         /* location title etc. */
+    --fs-display-lg: 1.875rem;                        /* card h3          */
+    --fs-display-md: 1.5rem;                          /* why-us item title */
+    --fs-display-price: 1.875rem;                     /* service price    */
+
+    /* Body (Poppins) */
+    --fs-body-xl:   1.25rem;   /* large prose / review text */
+    --fs-body-lg:   1.125rem;  /* medium descriptions       */
+    --fs-body-md:   1rem;      /* default body              */
+    --fs-body-sm:   0.875rem;  /* captions / labels         */
+    --fs-body-xs:   0.75rem;   /* fine print                */
+    --fs-body-xxs:  0.6875rem; /* tiny labels               */
+
+    /* Nav / UI labels */
+    --fs-nav:       1.25rem;   /* desktop nav links         */
+    --fs-nav-mobile: 1.5rem;   /* mobile nav links          */
+    --fs-btn:       0.875rem;  /* button text               */
+    --fs-tag:       0.875rem;  /* "Signature" badge etc.    */
+    --fs-price-from: 0.625rem; /* "From" micro-label        */
+
+    /* Intro / splash */
+    --fs-intro-brand: clamp(2.5rem, 8vw, 4.5rem);
+    --fs-intro-sub:   clamp(0.6rem, 2vw, 0.8rem);
+
+    /* Logo */
+    --fs-logo:       2.25rem;
+    --fs-logo-sub:   0.75rem;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -104,6 +132,117 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+}
+
+/* ── Typography utility classes ─────────────────────────────────────────────
+   Используй эти классы вместо произвольных font-size / font-family в компонентах.
+   Всё управление шрифтами — ЗДЕСЬ.
+── */
+@layer utilities {
+
+  /* ── Font families ── */
+  .font-cormorant-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* ── Cormorant headings (section / hero) ── */
+  .text-h1        { font-size: var(--fs-h1);        line-height: 0.95; }
+  .text-h2        { font-size: var(--fs-h2);        line-height: 1.25; }
+  .text-section   { font-size: var(--fs-section);   line-height: 1.1;  }
+  .text-card-title{ font-size: var(--fs-card-title); line-height: 1.15; }
+
+  /* ── Display (Playfair) ── */
+  .text-display-xl { font-size: var(--fs-display-xl); }
+  .text-display-lg { font-size: var(--fs-display-lg); }
+  .text-display-md { font-size: var(--fs-display-md); }
+  .text-price      { font-size: var(--fs-display-price); }
+
+  /* ── Body (Poppins) ── */
+  .text-body-xl  { font-size: var(--fs-body-xl);  line-height: 1.6; }
+  .text-body-lg  { font-size: var(--fs-body-lg);  line-height: 1.6; }
+  .text-body-md  { font-size: var(--fs-body-md);  line-height: 1.6; }
+  .text-body-sm  { font-size: var(--fs-body-sm);  line-height: 1.5; }
+  .text-body-xs  { font-size: var(--fs-body-xs);  line-height: 1.4; }
+  .text-body-xxs { font-size: var(--fs-body-xxs); line-height: 1.3; }
+
+  /* ── UI / Nav ── */
+  .text-nav        { font-size: var(--fs-nav);        }
+  .text-nav-mobile { font-size: var(--fs-nav-mobile); }
+  .text-btn        { font-size: var(--fs-btn);        }
+  .text-tag        { font-size: var(--fs-tag);        }
+  .text-price-from { font-size: var(--fs-price-from); }
+
+  /* ── Logo ── */
+  .text-logo     { font-size: var(--fs-logo);     }
+  .text-logo-sub { font-size: var(--fs-logo-sub); }
+
+  /* ── Intro splash ── */
+  .text-intro-brand { font-size: var(--fs-intro-brand); }
+  .text-intro-sub   { font-size: var(--fs-intro-sub);   }
+
+  /* ── Shared component patterns ─────────────────────────────────────────── */
+
+  /* Pill badge (e.g. "Signature", "new") */
+  .badge-pill {
+    @apply inline-flex items-center px-3 py-1 rounded-full font-bold uppercase tracking-wider;
+    font-size: var(--fs-tag);
+  }
+
+  /* Book Now / CTA button */
+  .btn-book {
+    @apply inline-flex items-center justify-center font-sans font-bold rounded-full transition whitespace-nowrap;
+    font-size: var(--fs-btn);
+  }
+
+  /* Section heading block */
+  .section-heading {
+    @apply font-cormorant-heading text-center text-glowly-black mb-12;
+    font-size: var(--fs-section);
+  }
+
+  /* Why-us pill chip */
+  .chip-white {
+    @apply bg-white/90 rounded-full px-6 py-2 w-fit shadow-sm;
+  }
+
+  /* Review card */
+  .review-card {
+    @apply min-w-[300px] md:min-w-[350px] bg-white rounded-[32px] p-6 border border-glowly-lavender/30 shadow-sm snap-start;
+  }
+
+  /* FAQ / Services accordion item */
+  .accordion-item {
+    @apply overflow-hidden transition-all duration-300;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes introLogo {
+    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes introSub {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes introLine {
+    from { width: 0; opacity: 0; }
+    to   { width: 120px; opacity: 1; }
+  }
+
+  .animate-fade-slide-up { animation: fadeSlideUp 0.5s both; }
+  .animate-intro-logo    { animation: introLogo 0.7s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .animate-intro-sub     { animation: introSub  0.6s 0.3s cubic-bezier(0.16,1,0.3,1) both; }
+  .animate-intro-line    { animation: introLine 0.6s 0.5s cubic-bezier(0.16,1,0.3,1) both; }
 }
 
 @layer base {

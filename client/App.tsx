@@ -1,37 +1,37 @@
 import "./global.css";
 
-import { Toaster } from "@/components/ui/toaster";
 import { createRoot } from "react-dom/client";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import ServicePage from "./pages/ServicePage";
 
-const queryClient = new QueryClient();
+const NotFound      = lazy(() => import("./pages/NotFound"));
+const ServicePage   = lazy(() => import("./pages/ServicePage"));
+const ServicesPage  = lazy(() => import("./pages/ServicesPage"));
+const TrainingPage  = lazy(() => import("./pages/TrainingPage"));
+const PrivacyPage   = lazy(() => import("./pages/PrivacyPage"));
+const TermsPage     = lazy(() => import("./pages/TermsPage"));
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter
-  future={{
-    v7_startTransition: true,
-    v7_relativeSplatPath: true,
-  }}
->
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/services/:slug" element={<ServicePage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <BrowserRouter
+    future={{
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    }}
+  >
+    <Suspense fallback={null}>
+      <Routes>
+        <Route path="/"                   element={<Index />} />
+        <Route path="/services"           element={<ServicesPage />} />
+        <Route path="/services/:slug"     element={<ServicePage />} />
+        <Route path="/training"           element={<TrainingPage />} />
+        <Route path="/privacy"            element={<PrivacyPage />} />
+        <Route path="/terms"              element={<TermsPage />} />
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*"                   element={<NotFound />} />
+      </Routes>
+    </Suspense>
+  </BrowserRouter>
 );
 
 createRoot(document.getElementById("root")!).render(<App />);
