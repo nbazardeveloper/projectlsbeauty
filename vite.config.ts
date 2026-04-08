@@ -30,15 +30,17 @@ function copyRoutesPlugin(): Plugin {
   return {
     name: "copy-routes",
     closeBundle() {
-      // Копируем _routes.json
       if (fs.existsSync("_routes.json")) {
         fs.copyFileSync("_routes.json", "dist/_routes.json");
-        console.log("✓ _routes.json copied to dist/");
       }
-      // Копируем functions/
-      if (fs.existsSync("functions")) {
-        fs.cpSync("functions", "dist/functions", { recursive: true });
-        console.log("✓ functions/ copied to dist/");
+      // Копируем содержимое functions/ а не саму папку
+      if (fs.existsSync("functions/api")) {
+        fs.mkdirSync("dist/functions/api", { recursive: true });
+        const files = fs.readdirSync("functions/api");
+        files.forEach(file => {
+          fs.copyFileSync(`functions/api/${file}`, `dist/functions/api/${file}`);
+        });
+        console.log("✓ functions/api/ copied to dist/functions/api/");
       }
     },
   };
