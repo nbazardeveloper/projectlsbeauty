@@ -52,7 +52,7 @@ export default function ServicesPage() {
           style={{
             width: "60vw",
             height: "60vh",
-            background: "radial-gradient(ellipse 50% 45% at 75% 20%, rgba(92,225,230,0.3) 0%, rgba(92,225,230,0) 100%)",
+           background: "radial-gradient(ellipse 50% 45% at 75% 20%, rgba(0, 151, 167, 0.2) 0%, rgba(0, 151, 167, 0) 100%)"
           }}
         />
 
@@ -102,7 +102,7 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          <section className="py-12 lg:py-16" style={{ background: "rgba(0,151,167,0.08)" }} aria-label="Why choose LS Beauty">
+          <section className="py-12 lg:py-16" style={{ background: "rgba(0, 151, 167, 0.8)" }} aria-label="Why choose LS Beauty">
             <div className="max-w-7xl mx-auto px-6 text-center">
               <h2 className="font-cormorant-heading text-section text-glowly-black mb-10">Why Clients Choose LS Beauty</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">

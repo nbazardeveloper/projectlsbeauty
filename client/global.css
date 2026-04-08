@@ -1,4 +1,6 @@
 /** @import must precede all other statements */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +9,10 @@
   /**
    * Tailwind CSS theme
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
   */
+  html {
+  scroll-behavior: smooth;
+}
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -47,43 +51,43 @@
     --glowly-white: 0 0% 100%;
 
     /* ── Typography scale ────────────────────────────────────────────────────
-       Централизованные размеры шрифтов. Меняй здесь — изменится везде.
+       Centralized font sizes. Change here — changes everywhere.
     ── */
 
-    /* Heading (Cormorant Garamond) */
-    --fs-h1:        clamp(2.25rem, 5vw, 3.75rem);   /* hero h1          */
+    /* Heading (Libre Baskerville) */
+    --fs-h1:        clamp(2.15rem, 5vw, 2.75rem);   /* hero h1          */
     --fs-h2:        clamp(1.5rem,  3vw, 2.25rem);   /* hero h2 subtitle */
     --fs-section:   clamp(2rem,    4vw, 3rem);       /* section titles   */
-    --fs-card-title: 2rem;                           /* service / card names */
+    --fs-card-title: 1.6rem;                           /* service / card names */
 
-    /* Display (Playfair Display) */
+    /* Display (Libre Baskerville) */
     --fs-display-xl: clamp(2rem, 4vw, 3rem);         /* location title etc. */
     --fs-display-lg: 1.875rem;                        /* card h3          */
     --fs-display-md: 1.5rem;                          /* why-us item title */
-    --fs-display-price: 1.875rem;                     /* service price    */
+    --fs-display-price: 1.7rem;                     /* service price    */
 
-    /* Body (Poppins) */
+    /* Body (DM Sans) — minimum 12px = 0.75rem */
     --fs-body-xl:   1.25rem;   /* large prose / review text */
     --fs-body-lg:   1.125rem;  /* medium descriptions       */
     --fs-body-md:   1rem;      /* default body              */
-    --fs-body-sm:   0.875rem;  /* captions / labels         */
-    --fs-body-xs:   0.75rem;   /* fine print                */
-    --fs-body-xxs:  0.6875rem; /* tiny labels               */
+    --fs-body-sm:   0.875rem;  /* captions / labels  14px   */
+    --fs-body-xs:   0.8125rem; /* fine print         13px   */
+    --fs-body-xxs:  0.75rem;   /* tiny labels        12px   */
 
     /* Nav / UI labels */
-    --fs-nav:       1.25rem;   /* desktop nav links         */
+    --fs-nav:       1.125rem;  /* desktop nav links         */
     --fs-nav-mobile: 1.5rem;   /* mobile nav links          */
     --fs-btn:       0.875rem;  /* button text               */
-    --fs-tag:       0.875rem;  /* "Signature" badge etc.    */
-    --fs-price-from: 0.625rem; /* "From" micro-label        */
+    --fs-tag:       0.675rem;  /* "Signature" badge etc.    */
+    --fs-price-from: 0.75rem;  /* "From" micro-label 12px   */
 
     /* Intro / splash */
     --fs-intro-brand: clamp(2.5rem, 8vw, 4.5rem);
-    --fs-intro-sub:   clamp(0.6rem, 2vw, 0.8rem);
+    --fs-intro-sub:   clamp(0.75rem, 2vw, 0.875rem); /* min 12px */
 
     /* Logo */
-    --fs-logo:       2.25rem;
-    --fs-logo-sub:   0.75rem;
+    --fs-logo:       2rem;
+    --fs-logo-sub:   0.75rem;  /* 12px min */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -135,32 +139,37 @@
 }
 
 /* ── Typography utility classes ─────────────────────────────────────────────
-   Используй эти классы вместо произвольных font-size / font-family в компонентах.
-   Всё управление шрифтами — ЗДЕСЬ.
+   Use these classes instead of arbitrary font-size / font-family in components.
 ── */
 @layer utilities {
 
   /* ── Font families ── */
-  .font-cormorant-heading {
-    font-family: "Cormorant Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
+  .font-libre-heading {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
     font-style: normal;
   }
 
-  /* ── Cormorant headings (section / hero) ── */
+  /* Keep backward-compat alias */
+  .font-cormorant-heading {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* ── Libre Baskerville headings (section / hero) ── */
   .text-h1        { font-size: var(--fs-h1);        line-height: 0.95; }
   .text-h2        { font-size: var(--fs-h2);        line-height: 1.25; }
   .text-section   { font-size: var(--fs-section);   line-height: 1.1;  }
   .text-card-title{ font-size: var(--fs-card-title); line-height: 1.15; }
 
-  /* ── Display (Playfair) ── */
+  /* ── Display (Libre Baskerville) ── */
   .text-display-xl { font-size: var(--fs-display-xl); }
   .text-display-lg { font-size: var(--fs-display-lg); }
   .text-display-md { font-size: var(--fs-display-md); }
   .text-price      { font-size: var(--fs-display-price); }
 
-  /* ── Body (Poppins) ── */
+  /* ── Body (DM Sans) ── */
   .text-body-xl  { font-size: var(--fs-body-xl);  line-height: 1.6; }
   .text-body-lg  { font-size: var(--fs-body-lg);  line-height: 1.6; }
   .text-body-md  { font-size: var(--fs-body-md);  line-height: 1.6; }
@@ -199,7 +208,7 @@
 
   /* Section heading block */
   .section-heading {
-    @apply font-cormorant-heading text-center text-glowly-black mb-12;
+    @apply font-libre-heading text-center text-glowly-black mb-12;
     font-size: var(--fs-section);
   }
 
@@ -252,6 +261,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "DM Sans", sans-serif;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {

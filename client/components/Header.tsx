@@ -21,34 +21,46 @@ export const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex-shrink-0 flex flex-col leading-tight items-center"
+        {/* Logo — Libre Baskerville */}
+        <a
+          href="/"
+          onClick={(e) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+  className="flex-shrink-0 flex flex-col leading-tight items-center"
         >
-          <span className="font-display font-bold text-logo text-glowly-black">
+          <span
+            className="font-libre-heading text-glowly-black"
+            style={{ fontSize: "var(--fs-logo)", lineHeight: 1 }}
+          >
             LS Beauty
           </span>
-          <span className="font-display font-normal text-logo-sub tracking-widest text-glowly-black/70 uppercase">
+          <span
+            className="font-sans font-normal tracking-widest text-glowly-black/60 uppercase"
+            style={{ fontSize: "var(--fs-logo-sub)" }}
+          >
             Salon &amp; Spa
           </span>
-        </button>
+        </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-12">
+        {/* Desktop Navigation — DM Sans */}
+        <nav className="hidden md:flex items-center gap-10">
           {[
             { label: "Why us",    href: "/#why" },
-            { label: "Services",  href: "/#services" },
+            { label: "Services",  href: "/services" },
             { label: "Reviews",   href: "/#reviews" },
             { label: "Locations", href: "/#locations" },
             { label: "F.A.Q",    href: "/#faq" },
-            { label: "Training", href: "/training" },
-             
+            { label: "Training",  href: "/training" },
           ].map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className="text-glowly-black font-sans font-medium text-nav hover:text-glowly-orange transition duration-200"
+              className="text-glowly-black font-sans font-medium hover:text-glowly-orange transition duration-200"
+              style={{ fontSize: "var(--fs-nav)" }}
             >
               {label}
             </a>
@@ -57,7 +69,7 @@ export const Header = () => {
 
         {/* Right side */}
         <div className="flex items-center gap-4">
-          <MobileMenu iconColor={isScrolled ? "black" : "white"} />
+          <MobileMenu iconColor={isScrolled ? "black" : "black"} />
         </div>
       </div>
     </header>

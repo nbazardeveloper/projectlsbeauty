@@ -3,7 +3,7 @@ const HERO_BOOKING_URL =
 const HERO_GIFT_CARD_URL =
   "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwFOJB1AeuqxRjyZH8YS7IYXwBwFAB0TGdHNwRSo90SWh3Bs3TvJuREt3KNTa/L/LBnHHa0HWqyVicF5HZvXwz96qZ5bFv++gDLxRW94elRMt9NKSWtIhDAH+pCAH3IKa+5GHi/iQ17Y3E+2WKo9xHWTz8G2l7oputHQmq83e3w3telJLWGhjA+fROem3gAw/SA==";
 
-/** Floating feature badge — shared between badges */
+/** Floating feature badge */
 const FeatureBadge = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-white rounded-full px-4 py-2 shadow-lg border border-glowly-lavender/30 flex items-center gap-2">
     <svg
@@ -13,7 +13,10 @@ const FeatureBadge = ({ children }: { children: React.ReactNode }) => (
     >
       <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
     </svg>
-    <span className="font-sans text-body-sm font-semibold text-glowly-black whitespace-nowrap">
+    <span
+      className="font-sans font-semibold text-glowly-black whitespace-nowrap"
+      style={{ fontSize: "var(--fs-body-sm)" }}
+    >
       {children}
     </span>
   </div>
@@ -27,15 +30,32 @@ export const Hero = () => {
 
           {/* ── Left content ── */}
           <div className="flex flex-col justify-center z-10">
-            <p className="font-sans font-normal text-body-sm sm:text-body-lg text-glowly-black mb-2 lg:mb-4">
+            <p
+              className="font-sans font-normal text-glowly-black mb-2 lg:mb-4"
+              style={{ fontSize: "var(--fs-body-md)" }}
+            >
               Your local nail place
             </p>
 
-            <h1 className="font-cormorant-heading text-h1 text-glowly-black mb-2 lg:mb-4">
-              Premium Russian Gel Manicure &amp; Pedicure in Paoli, PA
+            {/* H1 — Libre Baskerville */}
+            <h1
+              className="font-libre-heading text-glowly-black mb-2 lg:mb-4"
+              style={{ fontSize: "var(--fs-h1)", lineHeight: 1.1 }}
+            >
+              Premium Russian Gel Manicure &amp; Pedicure in Paoli, Pennsylvania
             </h1>
 
-            <h2 className="font-cormorant-heading text-h2 text-glowly-black mb-4 lg:mb-8">
+            {/* H2 — Libre Baskerville italic */}
+            <h2
+              className="text-glowly-black mb-4 lg:mb-8"
+              style={{
+                fontFamily: '"Libre Baskerville", serif',
+                fontWeight: 400,
+                
+                fontSize: "var(--fs-h2)",
+                lineHeight: 1.25,
+              }}
+            >
               crafted with low-toxic formulas.
             </h2>
 
@@ -44,7 +64,8 @@ export const Hero = () => {
                 href={HERO_BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-book px-5 py-2 lg:px-8 lg:py-3 text-white font-display font-normal text-body-xl lg:text-display-md bg-glowly-action-orange shadow-lg hover:shadow-xl hover:opacity-80"
+                className="btn-book px-5 py-2 lg:px-8 lg:py-3 text-white bg-glowly-action-orange shadow-lg hover:shadow-xl hover:opacity-80"
+                style={{ fontSize: "clamp(1.10rem, 2vw, 1.125rem)" }}
               >
                 Book now
               </a>
@@ -53,9 +74,13 @@ export const Hero = () => {
                 href={HERO_GIFT_CARD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md border border-glowly-lavender/30 text-glowly-black font-sans font-semibold text-body-sm hover:shadow-lg transition duration-200 w-fit relative"
+                className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md border border-glowly-lavender/30 text-glowly-black font-sans font-semibold hover:shadow-lg transition duration-200 w-fit relative"
+                style={{ fontSize: "var(--fs-body-md)" }}
               >
-                <span className="absolute -top-3 left-0 bg-glowly-orange text-white text-body-xxs font-semibold px-2 py-0.5 rounded">
+                <span
+                  className="absolute -top-3 left-0 bg-glowly-orange text-white font-semibold px-2 py-0.5 rounded"
+                  style={{ fontSize: "var(--fs-body-xxs)" }}
+                >
                   new
                 </span>
                 <svg
@@ -77,17 +102,17 @@ export const Hero = () => {
           {/* ── Right image ── */}
           <div className="relative flex items-center justify-center">
             {/* Floating feature badges — desktop only */}
-            <div className="absolute inset-0 pointer-events-none z-20 hidden lg:block">
-              <div className="absolute top-12 right-40">
-                <FeatureBadge>300+ gel shades</FeatureBadge>
-              </div>
-              <div className="absolute top-1/3 right-8">
-                <FeatureBadge>SPF Skin Protection</FeatureBadge>
-              </div>
-              <div className="absolute top-1/2 right-12">
-                <FeatureBadge>HEMA-free, TPO-free Gel Formulas</FeatureBadge>
-              </div>
-            </div>
+           <div className="absolute inset-0 pointer-events-none z-20 hidden lg:block">
+  <div className="absolute top-12 right-16">
+    <FeatureBadge>300+ gel shades</FeatureBadge>
+  </div>
+  <div className="absolute top-1/3 right-0">
+    <FeatureBadge>SPF Skin Protection</FeatureBadge>
+  </div>
+  <div className="absolute top-[55%] right-6">
+    <FeatureBadge>HEMA-free, TPO-free Gel Formulas</FeatureBadge>
+  </div>
+</div>
 
             {/* Mobile image */}
             <div
@@ -101,8 +126,8 @@ export const Hero = () => {
               }}
             >
               <img
-                src="/images/hero/1.png"
-                alt="LS Beauty Manicure"
+                src="/images/hero/hero-mobile-manicure.png"
+                alt="Premium Russian Gel Manicure for hands at LS Beauty Salon, Paoli PA (mobile view)"
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"
@@ -112,7 +137,7 @@ export const Hero = () => {
               />
             </div>
 
-            {/* Desktop image — bleeds to right viewport edge */}
+            {/* Desktop image */}
             <div
               className="hidden lg:block h-[600px]"
               style={{
@@ -121,8 +146,8 @@ export const Hero = () => {
               }}
             >
               <img
-                src="/images/hero/2.png"
-                alt="LS Beauty Manicure"
+                src="/images/hero/hero-desktop-manicure.png"
+                alt="Premium Russian Gel Manicure for hands at LS Beauty Salon, Paoli PA (desktop view)"
                 className="w-full h-full object-cover object-left-top"
                 loading="eager"
                 fetchPriority="high"
@@ -138,3 +163,4 @@ export const Hero = () => {
     </section>
   );
 };
+

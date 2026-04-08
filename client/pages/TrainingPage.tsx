@@ -191,10 +191,10 @@ export default function TrainingPage() {
                 Learn the Russian Manicure technique, Hard Gel application, and Nail Art from experienced professionals at LS Beauty Salon. Our hands-on in-person courses are designed for licensed nail technicians who want to elevate their skills and grow their clientele.
               </p>
               <a
-                href="tel:+12679624747"
+                href="sms:+12679624747?body=Hi!%20I'm%20interested%20in%20nail%20training%20courses."
                 className="btn-book px-8 py-3 bg-glowly-action-orange text-white text-body-md shadow-lg hover:opacity-90"
               >
-                Call to Enroll — (267) 962-4747
+               Text to Enroll — (267) 962-4747
               </a>
             </div>
           </section>
@@ -210,7 +210,7 @@ export default function TrainingPage() {
           </section>
 
           {/* Why train with us */}
-          <section className="py-16 lg:py-20" style={{ background: "rgba(0,151,167,0.08)" }} aria-label="Why train with LS Beauty">
+          <section className="py-16 lg:py-20" style={{ background: "rgba(0, 151, 167, 0.8)" }} aria-label="Why train with LS Beauty">
             <div className="max-w-7xl mx-auto px-6">
               <h2 className="section-heading">Why Train With Us</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
