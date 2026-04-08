@@ -1,0 +1,7 @@
+cat > _routes.json << 'EOF'
+{
+  "version": 1,
+  "include": ["/api/*"],
+  "exclude": []
+}
+EOF
