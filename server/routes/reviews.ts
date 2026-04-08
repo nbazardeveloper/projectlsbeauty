@@ -29,12 +29,12 @@ router.get("/", async (_req: Request, res: Response) => {
       return res.json({ reviews: cache.data, cached: true });
     }
 
-    const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-    const placeId = process.env.GOOGLE_PLACE_ID;
+    const apiKey = process.env.VITE_GOOGLE_PLACES_API_KEY;
+    const placeId = process.env.VITE_GOOGLE_PLACE_ID;
 
     if (!apiKey || !placeId) {
       return res.status(500).json({
-        error: "Missing GOOGLE_PLACES_API_KEY or GOOGLE_PLACE_ID in environment variables",
+        error: "Missing VITE_GOOGLE_PLACES_API_KEY or VITE_GOOGLE_PLACE_ID in environment variables",
       });
     }
 
