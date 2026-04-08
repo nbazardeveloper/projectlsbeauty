@@ -42,7 +42,7 @@ export const Hero = () => {
               className="font-libre-heading text-glowly-black mb-2 lg:mb-4"
               style={{ fontSize: "var(--fs-h1)", lineHeight: 1.1 }}
             >
-              Premium Russian Gel Manicure &amp; Pedicure in Paoli, Pennsylvania
+              Russian Manicure &amp; Pedicure in Paoli, PA
             </h1>
 
             {/* H2 — Libre Baskerville italic */}
