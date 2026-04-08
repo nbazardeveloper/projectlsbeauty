@@ -1,6 +1,7 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { cloudflare } from "@cloudflare/vite-plugin";
 // Мы не импортируем createServer здесь для билда, чтобы не тянуть серверные зависимости в клиент
 // import { createServer } from "./server";
 
@@ -17,12 +18,9 @@ export default defineConfig(({ mode }) => ({
     emptyOutDir: true,
     // Убеждаемся, что билд идет в корень dist
   },
-  plugins: [
-    react(),
-    // Включаем плагин только если мы НЕ в режиме билда,
-    // чтобы Vercel не пытался инициализировать экспресс во время компиляции
-    mode === "development" ? expressPlugin() : [],
-  ],
+  plugins: [react(), // Включаем плагин только если мы НЕ в режиме билда,
+  // чтобы Vercel не пытался инициализировать экспресс во время компиляции
+  mode === "development" ? expressPlugin() : [], cloudflare()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
