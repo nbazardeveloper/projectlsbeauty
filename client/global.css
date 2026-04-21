@@ -10,6 +10,15 @@
    * Tailwind CSS theme
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
   */
+  body {
+    @apply text-glowly-black antialiased;
+    font-size: 16px; /* Базовый размер для всего сайта */
+  }
+
+  /* Запрещаем шрифты меньше 12px в любом месте */
+  * {
+    min-font-size: 12px;
+  }
   html {
   scroll-behavior: smooth;
 }
@@ -56,7 +65,7 @@
 
     /* Heading (Libre Baskerville) */
     --fs-h1:        clamp(2.15rem, 5vw, 2.75rem);   /* hero h1          */
-    --fs-h2:        clamp(1.5rem,  3vw, 2.25rem);   /* hero h2 subtitle */
+    --fs-h2:        clamp(1.2rem,  3vw, 2.25rem);   /* hero h2 subtitle */
     --fs-section:   clamp(2rem,    4vw, 3rem);       /* section titles   */
     --fs-card-title: 1.6rem;                           /* service / card names */
 
@@ -67,12 +76,15 @@
     --fs-display-price: 1.7rem;                     /* service price    */
 
     /* Body (DM Sans) — minimum 12px = 0.75rem */
-    --fs-body-xl:   1.25rem;   /* large prose / review text */
-    --fs-body-lg:   1.125rem;  /* medium descriptions       */
-    --fs-body-md:   1rem;      /* default body              */
-    --fs-body-sm:   0.875rem;  /* captions / labels  14px   */
-    --fs-body-xs:   0.8125rem; /* fine print         13px   */
-    --fs-body-xxs:  0.75rem;   /* tiny labels        12px   */
+  /* Body (DM Sans) — Теперь адаптивные для мобильных */
+    --fs-body-xl:   clamp(1.125rem, 2vw, 1.25rem);    /* 18px -> 20px */
+    --fs-body-lg:   clamp(1.05rem, 1.5vw, 1.125rem);  /* ~17px -> 18px */
+    --fs-body-md:   clamp(1rem, 1vw, 1.05rem);        /* 16px базовый */
+    
+    /* Эти два пункта были самыми проблемными: */
+    --fs-body-sm:   clamp(0.9375rem, 1vw, 1rem);      /* Моб: 15px, Десктоп: 16px */
+    --fs-body-xs:   clamp(0.875rem, 1vw, 0.9375rem);  /* Моб: 14px, Десктоп: 15px */
+    --fs-body-xxs:  clamp(0.8125rem, 1vw, 0.875rem);  /* Моб: 13px, Десктоп: 14px */
 
     /* Nav / UI labels */
     --fs-nav:       1.125rem;  /* desktop nav links         */

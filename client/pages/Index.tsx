@@ -4,6 +4,9 @@ import { Footer } from "@/components/Footer";
 import { Seo } from "@/components/Seo";
 import { useState } from "react";
 import { GoogleReviews } from "@/components/GoogleReviews";
+import { OwnerStory } from "@/components/OwnerStory";
+import { ExperiencedTeam } from "@/components/ExperiencedTeam";
+import { SalonGallery } from "@/components/SalonGallery";
 
 
 // ─── SEO: JSON-LD structured data ────────────────────────────────────────────
@@ -31,30 +34,6 @@ const structuredData = {
     "https://www.tiktok.com/@lsbeauty24",
   ],
 };
-
-// ─── FAQ Data ─────────────────────────────────────────────────────────────────
-const faqs = [
-  {
-    q: "What is a Russian Manicure?",
-    a: "A Russian Manicure is a dry nail care technique that uses an e-file (electric drill) to meticulously clean and prep the skin around the nail. It results in an incredibly clean, precise finish with no cutting of the cuticles — just gentle removal of dead skin for a polished, long-lasting look.",
-  },
-  {
-    q: "What is Strong Gel Manicure at LS Beauty?",
-    a: "Our Strong Gel (Hard Gel) Manicure combines the precision of a Russian Manicure prep with a durable hard gel application. It's stronger than regular gel polish, won't lift, and protects your natural nails — perfect for clients who want length, strength, and a flawless finish.",
-  },
-  {
-    q: "What is a Russian Pedicure?",
-    a: "A Russian Pedicure applies the same e-file dry technique to feet — carefully removing dead skin, cleaning around the nails, and shaping them. The result is smoother skin and neater nails without water soaking, which helps the polish last longer.",
-  },
-  {
-    q: "How is a Russian Manicure different from a regular manicure?",
-    a: "A traditional manicure involves soaking the hands and using nippers to cut cuticles, which can cause regrowth and irritation. The Russian technique is entirely dry, uses precision e-file bits, and removes only the non-living tissue — it's more hygienic, more precise, and the results last significantly longer.",
-  },
-  {
-    q: "What's included in the Strong Gel service?",
-    a: "Our Strong Gel service includes: removal of previous product, full Russian Manicure prep, hard gel application, shaping, and your choice of gel color or French. Everything is included in one flat price — no hidden add-ons.",
-  },
-];
 
 // ─── Services Data ────────────────────────────────────────────────────────────
 const SIGNATURE_COLOR = "#0097A7";
@@ -126,7 +105,6 @@ function IntroScreen({ onDone }: { onDone: () => void }) {
         <span className="text-intro-sub text-glowly-orange animate-intro-sub uppercase tracking-[0.35em] mt-[6px]">
           Salon &amp; Spa
         </span>
-        {/* Animated underline — width animates from 0, must stay inline */}
         <div
           className="mt-3 h-[2px] animate-intro-line"
           style={{ background: "linear-gradient(90deg, #0097A7, #49d0c9)", width: 0 }}
@@ -171,7 +149,7 @@ function ServicesAccordion() {
 
                 <div className="flex items-center gap-3 lg:gap-6 flex-shrink-0">
                   <div className="flex items-center gap-1.5 lg:gap-2">
-                    <span className="font-sans text-price-from text-glowly-black/60 uppercase tracking-tighter">
+                    <span className="font-sans text-price-from text-glowly-black/90 uppercase tracking-tighter">
                       From
                     </span>
                     <span className="font-display text-price text-glowly-black whitespace-nowrap">
@@ -195,65 +173,6 @@ function ServicesAccordion() {
         );
       })}
     </div>
-  );
-}
-
-// ─── FAQ Accordion ────────────────────────────────────────────────────────────
-function FaqAccordion() {
-  const [open, setOpen] = useState<number | null>(null);
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <div className="space-y-3">
-        {faqs.map((item, i) => (
-          <div
-            key={i}
-            className="accordion-item border-2 border-glowly-orange"
-            style={{ borderRadius: open === i ? "28px" : "9999px" }}
-          >
-            <button
-              className="w-full flex items-center justify-between px-7 py-5 text-left"
-              onClick={() => setOpen(open === i ? null : i)}
-              aria-expanded={open === i}
-            >
-              <span className="font-cormorant-heading text-body-lg lg:text-body-xl text-glowly-black pr-4">
-                {item.q}
-              </span>
-              <div
-                className="flex-shrink-0 w-9 h-9 rounded-full bg-glowly-orange/90 flex items-center justify-center transition-transform duration-300"
-                style={{ transform: open === i ? "rotate(45deg)" : "rotate(0deg)" }}
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-                  <line x1="8" y1="2" x2="8" y2="14" />
-                  <line x1="2" y1="8" x2="14" y2="8" />
-                </svg>
-              </div>
-            </button>
-            {open === i && (
-              <div className="px-7 pb-6">
-                <p className="font-sans text-body-sm lg:text-body-md text-glowly-black/70 leading-relaxed">
-                  {item.a}
-                </p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </>
   );
 }
 
@@ -311,7 +230,10 @@ export default function Index() {
           </main>
         </div>
 
-        {/* ── Services ── */}
+        {/* ── 2. About Owner / История салона ── */}
+        <OwnerStory />
+
+        {/* ── 3. Services ── */}
         <section id="services" className="relative py-16 lg:py-24" aria-label="Our Services">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="section-heading">Services</h2>
@@ -329,7 +251,6 @@ export default function Index() {
 
         {/* ── Reviews ── */}
         <GoogleReviews />
-        
 
         {/* ── Why LS Beauty ── */}
         <section id="why" className="relative py-16 lg:py-24 overflow-visible" aria-label="Why Choose LS Beauty">
@@ -337,7 +258,7 @@ export default function Index() {
 
             {/* Mobile */}
             <div className="lg:hidden rounded-[48px] overflow-hidden flex flex-col relative" style={{ marginTop: "4rem", marginBottom: "4rem" }}>
-              <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/why/LSBeauty-location.webp')", backgroundSize: "cover", backgroundPosition: "center", filter: "blur(7px) brightness(0.75)", transform: "scale(1.08)", zIndex: 0 }} />
+              <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/why/LSBeauty-location-nails.webp')", backgroundSize: "cover", backgroundPosition: "center", filter: "blur(7px) brightness(0.75)", transform: "scale(1.08)", zIndex: 0 }} />
               <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,151,167,0.5)", zIndex: 1 }} />
               <div className="p-8 flex flex-col gap-8 relative" style={{ zIndex: 2 }}>
                 {WHY_ITEMS.map((item) => (
@@ -356,7 +277,6 @@ export default function Index() {
 
             {/* Desktop */}
             <div className="relative hidden lg:flex flex-row items-stretch" style={{ minHeight: "550px", overflow: "visible" }}>
-              {/* Shared background */}
               <div
                 aria-hidden="true"
                 style={{
@@ -367,11 +287,10 @@ export default function Index() {
                   overflow: "hidden", zIndex: 0,
                 }}
               >
-                <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/why/LSBeauty-location.webp')", backgroundSize: "cover", backgroundPosition: "center", filter: "blur(5px) brightness(0.75)", transform: "scale(1.08)" }} />
+                <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/why/LSBeauty-location-nails.webp')", backgroundSize: "cover", backgroundPosition: "center", filter: "blur(5px) brightness(0.75)", transform: "scale(1.08)" }} />
                 <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,151,167,0.45)" }} />
               </div>
 
-              {/* Left — master image bleeding up */}
               <div
                 className="relative hidden lg:flex items-end justify-center"
                 style={{
@@ -388,7 +307,6 @@ export default function Index() {
                 />
               </div>
 
-              {/* Right — text */}
               <div className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center gap-10" style={{ zIndex: 2, position: "relative" }}>
                 {WHY_ITEMS.map((item) => (
                   <div key={item.title} className="space-y-3">
@@ -403,6 +321,12 @@ export default function Index() {
 
           </div>
         </section>
+
+        {/* ── 4. Experienced Team ── */}
+        <ExperiencedTeam />
+
+        {/* ── 5. Gallery + 6. FAQ (inside SalonGallery) ── */}
+        <SalonGallery />
 
         {/* ── Locations ── */}
         <section id="locations" className="py-12 lg:py-24" aria-label="Salon Location and Hours">
@@ -424,14 +348,14 @@ export default function Index() {
               <div className="bg-white px-8 lg:px-12 pt-6 pb-10 flex flex-col items-center text-center gap-6">
                 <div>
                   <h3 className="font-display text-display-lg text-glowly-black mb-1">LS Beauty Salon</h3>
-                  <p className="font-sans text-body-md text-glowly-black/60">Paoli, Pennsylvania</p>
+                  <p className="font-sans text-body-md text-glowly-black/90">Paoli, Pennsylvania</p>
                 </div>
 
                 <address className="not-italic flex flex-col items-center gap-3 w-full">
                   <a href="tel:+12679624747" className="font-sans text-body-lg font-bold text-glowly-black hover:text-glowly-action-orange transition-colors">
                     (267) 962-4747
                   </a>
-                  <p className="font-sans text-body-md text-glowly-black/70">24 Paoli Pike, Paoli, PA 19301</p>
+                  <p className="font-sans text-body-md text-glowly-black/90">24 Paoli Pike, Paoli, PA 19301</p>
                 </address>
 
                 <div className="w-full rounded-2xl px-6 py-4 space-y-2">
@@ -441,7 +365,7 @@ export default function Index() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-sans text-body-xs font-bold uppercase tracking-widest text-glowly-black/90">Sunday</span>
-                    <span className="font-sans text-body-sm italic text-glowly-black/60">By appointment only</span>
+                    <span className="font-sans text-body-sm italic text-glowly-black/90">By appointment only</span>
                   </div>
                 </div>
 
@@ -449,20 +373,22 @@ export default function Index() {
                   <a
                     href="https://maps.google.com/?q=24+Paoli+Pike,+Paoli,+PA+19301"
                     target="_blank" rel="noopener noreferrer"
-                    className="btn-book flex-1 px-6 py-3 text-btn bg-glowly-orange text-white uppercase tracking-widest shadow-lg hover:scale-105 active:scale-95"
+                    className="btn-book flex-1 px-6 py-3 text-btn bg-glowly-orange text-white  shadow-lg hover:scale-105 active:scale-95"
+                   style={{ fontSize: "clamp(1.10rem, 2vw, 1.125rem)" }}
                   >
                     Get Directions
                   </a>
                   <a
                     href="https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwNlvYRLH2CLa8oQn7Kvmq3u9a9wMuqMg2ykEqGkJqLcdcR91UlT1Cp4HwOydwDxY8kULw76hB6JD2JbI2jgKzQI5Y9tMd+N5AevdKLZA+iD12dDf9MA+h2I/CGCcfoiVsCWKdZqAnTwLpMAaM2h3YWoPeiHpmo4Ulg0aaVUjKuB6WU/auJjjEidtZGYbjBf6ukczEJqAkJYyNz1NrrDG1D4="
                     target="_blank" rel="noopener noreferrer"
-                    className="btn-book flex-1 px-6 py-3 text-btn border-2 bg-glowly-action-orange text-glowly-white uppercase tracking-widest hover:bg-glowly-orange hover:text-white"
+                    className="btn-book flex-1 px-6 py-3 text-btn border-2 bg-glowly-action-orange text-glowly-white hover:bg-glowly-orange hover:text-white"
+                   style={{ fontSize: "clamp(1.10rem, 2vw, 1.125rem)" }}
                   >
                     Book Now
                   </a>
                 </div>
 
-                <p className="font-sans text-body-xxs text-glowly-black/40 italic">
+                <p className="font-sans text-body-xxs text-glowly-black/90 italic">
                   * We recommend booking in advance to secure your preferred time.
                 </p>
               </div>
@@ -499,19 +425,10 @@ export default function Index() {
               href="https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVEnk9BFT/HqRx/IALXmx5C7ImPYA3Yu4eIJtK+ueOk80+3J3nlWbHbq7DuOtJQ9ddI4oI7CbNGfrxHQ6dH5RO5qT+qxmUSnICrMTVzNEheBLMe+tjWHsrEdmASaowojwhLf8JEkDHOo1PsHhWdIZJLSwxJHep4Z7y4iwaAjizgw/wCdmoGoxQHAWvJiNJdO1sBxAU0UUHUE4zBAhZfVPr54NuPAKJju5PNv6HFdmssje5KdElf82YprLypFyRSD1jZyvOwmpHq1gckuXRK7qlqXR2qU2DyuQY5Ow6oqhVOFe1e1YLMpX9828Uf5Hu0ohwFOJB1AeuqxRjyZH8YS7IYXwBwFAB0TGdHNwRSo90SWh3Bs3TvJuREt3KNTa/L/LBnHHa0HWqyVicF5HZvXwz96qZ5bFv++gDLxRW94elRMt9NKSWtIhDAH+pCAH3IKa+5GHi/iQ17Y3E+2WKo9xHWTz8G2l7oputHQmq83e3w3telJLWGhjA+fROem3gAw/SA=="
               target="_blank" rel="noopener noreferrer"
               className="btn-book gap-2 px-8 py-4 text-body-md bg-glowly-orange text-white hover:opacity-80"
-            >
+            style={{ fontSize: "clamp(1.10rem, 2vw, 1.125rem)" }}
+           >
               <span aria-hidden="true">→</span> Purchase Gift Card
             </a>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section id="faq" className="py-16 lg:py-24 bg-white" aria-label="Frequently Asked Questions">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="font-cormorant-heading text-display-lg lg:text-display-xl text-center text-glowly-black mb-12">
-              Russian Manicure &amp; Strong Gel FAQ
-            </h2>
-            <FaqAccordion />
           </div>
         </section>
 
@@ -520,5 +437,3 @@ export default function Index() {
     </>
   );
 }
-
-

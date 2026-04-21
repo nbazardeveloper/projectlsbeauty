@@ -1,3 +1,11 @@
+// TrainingPage.tsx — full owner bio + training sections
+// Photo paths:
+//   /images/training/hero-teaching.webp
+//   /images/training/teaching-1.webp
+//   /images/training/teaching-2.webp
+//   /images/training/certificates.webp
+//   /images/training/owner-trainer.webp
+
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -71,7 +79,7 @@ const COURSES = [
   },
 ];
 
-function CourseCard({ course, index }: { course: typeof COURSES[0]; index: number }) {
+function CourseCard({ course }: { course: typeof COURSES[0] }) {
   const [open, setOpen] = useState(false);
   return (
     <article
@@ -117,7 +125,10 @@ function CourseCard({ course, index }: { course: typeof COURSES[0]; index: numbe
           <ul className="space-y-2 mb-8">
             {course.includes.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ background: "linear-gradient(135deg, #0097A7, #49d0c9)" }} aria-hidden="true">
+                <div
+                  className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 bg-glowly-orange"
+                  aria-hidden="true"
+                >
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20,6 9,17 4,12" />
                   </svg>
@@ -127,10 +138,12 @@ function CourseCard({ course, index }: { course: typeof COURSES[0]; index: numbe
             ))}
           </ul>
           <a
-            href="tel:+12679624747"
-            className="btn-book px-8 py-3 bg-glowly-action-orange text-white text-body-md hover:opacity-90"
+            href="https://www.vagaro.com/cl/WbFmBC9MPNMxiIeJG5Lj5Aqhd97xAjv9uz3eNk3vh5s="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-book px-8 py-3 text-body-md text-white bg-glowly-action-orange hover:opacity-90"
           >
-            Inquire About This Course
+            Enroll in Course
           </a>
         </div>
       )}
@@ -143,7 +156,7 @@ export default function TrainingPage() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "LS Beauty Salon & Spa — Nail Training",
-    description: "Professional nail technician training in Paoli, PA. Russian Manicure, Hard Gel, and Nail Art courses for licensed professionals.",
+    description: "Professional nail technician training in Paoli, PA.",
     url: "https://lsbeautysalon.com/training",
     address: {
       "@type": "PostalAddress",
@@ -166,50 +179,248 @@ export default function TrainingPage() {
       />
 
       <div className="min-h-screen bg-white overflow-x-hidden">
-        <div className="hidden lg:block absolute top-0 right-0 pointer-events-none z-0" aria-hidden="true"
-          style={{ width: "60vw", height: "60vh", background: "radial-gradient(ellipse 50% 45% at 75% 20%, rgba(92,225,230,0.3) 0%, rgba(92,225,230,0) 100%)" }}
-        />
         <Header />
 
-        <main className="pt-28 lg:pt-32 pb-0 relative" id="main-content">
+        <main className="pb-0 relative" id="main-content">
 
-          {/* Hero */}
-          <section className="max-w-7xl mx-auto px-6 mb-16 lg:mb-24">
-            <nav aria-label="Breadcrumb" className="mb-8">
-              <ol className="flex items-center gap-2 font-sans text-body-sm text-glowly-black/50">
-                <li><Link to="/" className="hover:text-glowly-orange transition-colors">Home</Link></li>
-                <li aria-hidden="true">/</li>
-                <li className="text-glowly-black font-medium" aria-current="page">Training</li>
-              </ol>
-            </nav>
-            <div className="max-w-3xl">
-              <p className="font-sans text-body-sm text-glowly-orange uppercase tracking-widest mb-3">Professional Education · Paoli, PA</p>
-              <h1 className="font-cormorant-heading text-h1 text-glowly-black mb-6">
-                Nail Technician Training
-              </h1>
-              <p className="font-sans text-body-xl text-glowly-black/70 leading-relaxed mb-8">
-                Learn the Russian Manicure technique, Hard Gel application, and Nail Art from experienced professionals at LS Beauty Salon. Our hands-on in-person courses are designed for licensed nail technicians who want to elevate their skills and grow their clientele.
-              </p>
-              <a
-                href="sms:+12679624747?body=Hi!%20I'm%20interested%20in%20nail%20training%20courses."
-                className="btn-book px-8 py-3 bg-glowly-action-orange text-white text-body-md shadow-lg hover:opacity-90"
-              >
-               Text to Enroll — (267) 962-4747
-              </a>
+      {/* ── Hero — clean light version ── */}
+<section className="relative bg-white pt-32 lg:pt-48 pb-16 lg:pb-24">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      {/* Left Content */}
+      <div className="relative z-10">
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center gap-2 font-sans text-body-sm text-glowly-black/90">
+            <li><Link to="/" className="hover:text-glowly-orange transition-colors">Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li className="text-glowly-black font-medium" aria-current="page">Training</li>
+          </ol>
+        </nav>
+        
+        <div className="max-w-2xl">
+          <p className="font-sans text-body-sm text-glowly-orange uppercase tracking-widest mb-3">
+            Professional Education · Paoli, PA
+          </p>
+          <h1 className="font-cormorant-heading text-h1 text-glowly-black mb-6">
+            Nail Technician Training
+          </h1>
+          <p className="font-sans text-body-xl text-glowly-black leading-relaxed mb-8">
+            Learn the Russian Manicure technique, Hard Gel application, and Nail Art from experienced professionals at LS Beauty Salon. Hands-on in-person courses for licensed nail technicians who want to elevate their skills.
+          </p>
+          <a
+            href="https://www.vagaro.com/cl/WbFmBC9MPNMxiIeJG5Lj5Aqhd97xAjv9uz3eNk3vh5s="
+            target="_blank"
+  rel="noopener noreferrer"
+            className="btn-book px-8 py-3 text-body-md text-white bg-glowly-action-orange shadow-lg hover:opacity-90 inline-block"
+          >
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+  
+
+    </div>
+  </div>
+</section>
+
+
+        {/* ── About the Founder — FULL BIO ── */}
+<section className="max-w-7xl mx-auto px-6 mb-16 lg:mb-24" aria-label="About the Founder">
+  <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
+
+    {/* Left Column: Photos */}
+    <div className="flex flex-col gap-4">
+      {/* Main Large Photo */}
+      <div className="overflow-hidden rounded-[36px] aspect-[4/3] shadow-lg">
+        <img
+          src="/images/training/owner-trainer.webp"
+          alt="Lira, founder of LS Beauty, teaching nail technician students"
+          className="w-full h-full object-cover"
+          loading="lazy"
+          width="600"
+          height="450"
+        />
+      </div>
+      
+      {/* Two Smaller Photos Below to fill the space */}
+      <div className="grid grid-cols-2 gap-4">
+        <div className="overflow-hidden rounded-[24px] aspect-square shadow-md">
+          <img
+            src="/images/training/teaching-3.webp"
+            alt="Process of training 1"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="overflow-hidden rounded-[24px] aspect-square shadow-md">
+          <img
+            src="/images/training/teaching-4.webp"
+            alt="Process of training 2"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    {/* Right Column: Full bio */}
+    <div>
+      <p className="font-sans text-body-sm text-glowly-orange uppercase tracking-widest mb-3">
+        About the Founder
+      </p>
+      <h2 className="font-cormorant-heading text-section text-glowly-black mb-6 leading-tight">
+        Lira
+      </h2>
+
+      <div className="space-y-4 font-sans text-body-md text-glowly-black/90 leading-relaxed">
+        <p>
+          My name is Lira, and I have been in the beauty industry for over 17 years. I am not just a nail artist. I am a woman, a mother of three, and a happy wife. And perhaps that is why I deeply understand how important it is for every woman to make time for herself — for beauty, self-care, and inner well-being.
+        </p>
+        <p>
+          My love for aesthetics began in childhood. I grew up in a family of artists. My father is a well-known artist in our city — a man of refined taste and a deep sense of beauty. From an early age, I was surrounded by art, attention to detail, and respect for aesthetics.
+        </p>
+        <p>
+          I still remember when I first started painting on nails. To me, they were like tiny canvases. I painted acrylic designs on nail tips, and my father viewed them as real miniature artworks. Looking back nearly 30 years ago, even as a young girl, I was already experimenting with nails.
+        </p>
+        <p>
+          After graduating with a degree in Accounting, I consciously chose the path of becoming a nail artist. And I chose Russian Manicure specifically — as a discipline built on precision, excellence, and quality. It became the work of my soul.
+        </p>
+
+        <div className="border-l-2 border-glowly-orange/30 pl-4 space-y-3">
+          <p className="font-cormorant-heading text-display-md text-glowly-black">Today</p>
+          <p>
+            Today, I bring together artistic vision, over 17 years of experience, perfectionism, and a deep understanding of nails. I am a licensed nail professional, licensed educator, international trainer, and a licensed Russian Manicure trainer in the United States. My students have become successful high-level professionals around the world.
+          </p>
+        </div>
+
+        <div className="border-l-2 border-glowly-orange/30 pl-4 space-y-3">
+          <p className="font-cormorant-heading text-display-md text-glowly-black">Standards</p>
+          <p>
+            Every artist at LS Beauty is trained through my system, works by unified standards, and perfects every detail. We do not work fast. We work with quality.
+          </p>
+        </div>
+
+        <div className="border-l-2 border-glowly-orange/30 pl-4 space-y-2">
+          <p className="font-cormorant-heading text-display-md text-glowly-black">Philosophy</p>
+          <p className="italic">
+            Manicure is not just maintenance. It is about confidence, how you feel, and self-love. Our mission: to make each person a little happier.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 flex flex-wrap gap-6">
+        {[
+          { num: "17+", label: "Years experience" },
+          { num: "4", label: "Max students per class" },
+          { num: "100%", label: "Hands-on training" },
+        ].map((stat) => (
+          <div key={stat.label}>
+            <p className="font-cormorant-heading text-display-xl text-glowly-orange leading-none">{stat.num}</p>
+            <p className="font-sans text-body-xs text-glowly-black/90 mt-1">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+          {/* ── Russian Manicure explanation ── */}
+          <section className="py-12 lg:py-16 bg-glowly-orange/5 mb-16 lg:mb-24" aria-label="About Russian Manicure">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div>
+                  <p className="font-sans text-body-sm text-glowly-orange uppercase tracking-widest mb-3">The technique</p>
+                  <h3 className="font-cormorant-heading text-section text-glowly-black mb-4">Russian Manicure</h3>
+                  <p className="font-sans text-body-md text-glowly-black/90 leading-relaxed">
+                    Russian Manicure is a premium technique known for exceptional cleanliness, precision, and long-lasting results. It is a standard of quality.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <p className="font-cormorant-heading text-display-md text-glowly-black">The result</p>
+                  {["Impeccably clean nails", "A polished, elevated look", "3+ weeks of wear"].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-glowly-orange flex-shrink-0 flex items-center justify-center">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                      </div>
+                      <span className="font-sans text-body-md text-glowly-black/90">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-4">
+                  <p className="font-cormorant-heading text-display-md text-glowly-black">Education</p>
+                  <p className="font-sans text-body-md text-glowly-black/90 leading-relaxed">
+                    I train professionals through my own system. The strongest students become part of our team.
+                  </p>
+                  <p className="font-sans text-body-sm text-glowly-black/90 italic">
+                    "We would be honored to welcome you to LS Beauty Nails & Spa."
+                  </p>
+                  <a
+                    href="https://www.vagaro.com/cl/WbFmBC9MPNMxiIeJG5Lj5Aqhd97xAjv9uz3eNk3vh5s="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-book px-6 py-3 text-body-md text-white bg-glowly-action-orange hover:opacity-90"
+                  >
+                   Enroll Now
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* Courses */}
+          {/* ── Courses ── */}
           <section className="max-w-7xl mx-auto px-6 mb-16 lg:mb-24" aria-label="Available Courses">
             <h2 className="section-heading">Available Courses</h2>
             <div className="space-y-4">
-              {COURSES.map((course, i) => (
-                <CourseCard key={course.id} course={course} index={i} />
+              {COURSES.map((course) => (
+                <CourseCard key={course.id} course={course} />
               ))}
             </div>
           </section>
 
-          {/* Why train with us */}
+          {/* ── Training photo gallery ── */}
+          <section className="max-w-7xl mx-auto px-6 mb-16 lg:mb-24" aria-label="Training in action">
+            <p className="font-sans text-body-sm text-glowly-black/90 uppercase tracking-widest mb-6 text-center">
+              Training in action
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="overflow-hidden rounded-[28px] aspect-[4/3]">
+                <img
+                  src="/images/training/teaching-1.webp"
+                  alt="Nail technician training course at LS Beauty Salon Paoli PA"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div className="overflow-hidden rounded-[28px] aspect-[4/3] sm:mt-6">
+                <img
+                  src="/images/training/teaching-2.webp"
+                  alt="Students practicing Russian Manicure technique at LS Beauty training"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div className="overflow-hidden rounded-[28px] aspect-[4/3]">
+                <img
+                  src="/images/training/certificates.webp"
+                  alt="Certificate ceremony for nail training graduates at LS Beauty Salon"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* ── Why train with us ── */}
           <section className="py-16 lg:py-20" style={{ background: "rgba(0, 151, 167, 0.8)" }} aria-label="Why train with LS Beauty">
             <div className="max-w-7xl mx-auto px-6">
               <h2 className="section-heading">Why Train With Us</h2>
@@ -222,26 +433,26 @@ export default function TrainingPage() {
                 ].map((item) => (
                   <div key={item.title} className="bg-white rounded-[28px] p-6 shadow-sm">
                     <h3 className="font-cormorant-heading text-display-md text-glowly-black mb-2">{item.title}</h3>
-                    <p className="font-sans text-body-sm text-glowly-black/60">{item.desc}</p>
+                    <p className="font-sans text-body-sm text-glowly-black/90">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* CTA */}
+          {/* ── CTA ── */}
           <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24 text-center">
             <h2 className="font-cormorant-heading text-section text-glowly-black mb-4">
               Ready to Elevate Your Skills?
             </h2>
-            <p className="font-sans text-body-lg text-glowly-black/60 mb-8 max-w-xl mx-auto">
-              Contact us to learn about upcoming course dates, pricing, and enrollment. We'd love to help you grow your nail career.
+            <p className="font-sans text-body-lg text-glowly-black/90 mb-8 max-w-xl mx-auto">
+              Contact us to learn about upcoming course dates, pricing, and enrollment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+12679624747" className="btn-book px-8 py-3 bg-glowly-action-orange text-white text-body-md shadow-lg hover:opacity-90">
+              <a href="tel:+12679624747" className="btn-book px-8 py-3 text-body-md text-white bg-glowly-action-orange shadow-lg hover:opacity-90">
                 Call (267) 962-4747
               </a>
-              <a href="https://www.instagram.com/lsbeautypaoli" target="_blank" rel="noopener noreferrer" className="btn-book px-8 py-3 border-2 border-glowly-orange text-glowly-black text-body-md hover:bg-glowly-orange/10 transition-colors">
+              <a href="https://www.instagram.com/lsbeautypaoli" target="_blank" rel="noopener noreferrer" className="btn-book px-8 py-3 text-body-md border-2 border-glowly-orange text-glowly-black hover:bg-glowly-orange/10">
                 DM on Instagram
               </a>
             </div>
@@ -253,3 +464,4 @@ export default function TrainingPage() {
     </>
   );
 }
+

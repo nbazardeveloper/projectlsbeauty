@@ -37,7 +37,6 @@ export const Hero = () => {
               Your local nail place
             </p>
 
-            {/* H1 — Libre Baskerville */}
             <h1
               className="font-libre-heading text-glowly-black mb-2 lg:mb-4"
               style={{ fontSize: "var(--fs-h1)", lineHeight: 1.1 }}
@@ -45,13 +44,11 @@ export const Hero = () => {
               Russian Manicure &amp; Pedicure in Paoli, PA
             </h1>
 
-            {/* H2 — Libre Baskerville italic */}
             <h2
               className="text-glowly-black mb-4 lg:mb-8"
               style={{
                 fontFamily: '"Libre Baskerville", serif',
                 fontWeight: 400,
-                
                 fontSize: "var(--fs-h2)",
                 lineHeight: 1.25,
               }}
@@ -102,21 +99,21 @@ export const Hero = () => {
           {/* ── Right image ── */}
           <div className="relative flex items-center justify-center">
             {/* Floating feature badges — desktop only */}
-           <div className="absolute inset-0 pointer-events-none z-20 hidden lg:block">
-  <div className="absolute top-12 right-16">
-    <FeatureBadge>300+ gel shades</FeatureBadge>
-  </div>
-  <div className="absolute top-1/3 right-0">
-    <FeatureBadge>SPF Skin Protection</FeatureBadge>
-  </div>
-  <div className="absolute top-[55%] right-6">
-    <FeatureBadge>HEMA-free, TPO-free Gel Formulas</FeatureBadge>
-  </div>
-</div>
+            {/* <div className="absolute inset-0 pointer-events-none z-20 hidden lg:block">
+              <div className="absolute top-12 right-16">
+                <FeatureBadge>300+ gel shades</FeatureBadge>
+              </div>
+              <div className="absolute top-1/3 right-0">
+                <FeatureBadge>SPF Skin Protection</FeatureBadge>
+              </div>
+              <div className="absolute top-[55%] right-6">
+                <FeatureBadge>HEMA-free, TPO-free Gel Formulas</FeatureBadge>
+              </div>
+            </div> */}
 
-            {/* Mobile image */}
+            {/* Mobile image — плавное затухание снизу через маску */}
             <div
-              className="lg:hidden flex items-center justify-center relative"
+              className="lg:hidden relative"
               style={{
                 marginLeft: "-3rem",
                 marginRight: "-3rem",
@@ -126,7 +123,7 @@ export const Hero = () => {
               }}
             >
               <img
-                src="/images/hero/hero-mobile-manicure.png"
+                src="/images/hero/hero-mobile-manicure.webp"
                 alt="Premium Russian Gel Manicure for hands at LS Beauty Salon, Paoli PA (mobile view)"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -134,6 +131,11 @@ export const Hero = () => {
                 decoding="async"
                 width="828"
                 height="828"
+                style={{
+                  // CSS mask: картинка полностью видна сверху, плавно исчезает в нижних 30%
+                  maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+                }}
               />
             </div>
 
@@ -146,7 +148,7 @@ export const Hero = () => {
               }}
             >
               <img
-                src="/images/hero/hero-desktop-manicure.png"
+                src="/images/hero/hero-desktop-manicure.webp"
                 alt="Premium Russian Gel Manicure for hands at LS Beauty Salon, Paoli PA (desktop view)"
                 className="w-full h-full object-cover object-left-top"
                 loading="eager"
@@ -163,4 +165,6 @@ export const Hero = () => {
     </section>
   );
 };
+
+
 

@@ -161,7 +161,7 @@ function ReviewCard({ review, index }: { review: GoogleReview; index: number }) 
       </div>
 
       <p
-        className="font-sans text-body-sm text-black/80 leading-relaxed flex-1 mb-3"
+        className="font-sans text-body-md text-black leading-relaxed flex-1 mb-3"
         itemProp="reviewBody"
       >
         {displayText}
@@ -237,7 +237,7 @@ export function GoogleReviews() {
             href="https://www.google.com/maps/place/?q=place_id:ChIJM8YCrCztxokROrn7um45rdM"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 font-sans text-body-sm text-glowly-black/70 hover:text-glowly-orange transition-colors"
+            className="flex items-center gap-2 font-sans text-body-md text-glowly-black/90 hover:text-glowly-orange transition-colors"
           >
             <GoogleLogo />
             <span>See all reviews on Google</span>

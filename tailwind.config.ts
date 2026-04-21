@@ -17,6 +17,13 @@ export default {
       },
     },
     extend: {
+      fontSize: {
+        // Устанавливаем безопасные минимумы
+        'body-xxs': ['0.8125rem', { lineHeight: '1.2rem' }], // 13px - минимум для читаемости
+        'body-xs': ['0.875rem', { lineHeight: '1.25rem' }],  // 14px
+        'body-sm': ['1rem', { lineHeight: '1.5rem' }],       // 16px (стандарт)
+        'body-md': ['1.125rem', { lineHeight: '1.75rem' }],  // 18px
+      },
       colors: {
         glowly: {
           orange: "#0097A7",
